@@ -90,29 +90,7 @@ function Navbar() {
                 مستلزمات شيفت
               </a>
             </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                قطاع الاعمال
-              </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    الامتياز التجارى
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    الشراكات والعقود
-                  </a>
-                </li>
-              </ul>
-            </li>
+            
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
                 فروعنا
@@ -139,11 +117,7 @@ function Navbar() {
                     شكاوى
                   </a>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    التوظيف
-                  </a>
-                </li>
+                
               </ul>
             </li>
           </ul>

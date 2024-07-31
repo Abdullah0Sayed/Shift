@@ -22,13 +22,7 @@ function Footer() {
     return (
         <div class="card text-center footer">
 
-                <div class="card-header">
-
-                    
-
-
-                </div>
-                <div class="card-body d-flex justify-content-evenly">
+                <div class="card-body">
                     <Box icon={time} title="مواعيد العمل" description="من الخميس للجمعة : 6:00 ص - 6:00 م" />
                     <Box icon={email} title="البريد الإلكتروني" description="info@dettaglioauto.sa" />
                     <Box icon={location} title="مقر الشركة" description="طريق وادي وج , المثناه , 26511 الطائف , السعودية" />
@@ -39,7 +33,7 @@ function Footer() {
                     <SocialLinks link="" icon={tiktok}/>
                     <SocialLinks link="" icon={snapchat}/>
                 </div>
-                <p>سياسة الخصوصية</p>
+                <p className='p-2 m-0'>سياسة الخصوصية</p>
                 <div class="card-footer ">
                     جميع الحقوق محفوظة لدى SHIFT
                 </div>

@@ -6,17 +6,22 @@
     --hoverLink--: #916bb8;
 }
 .box {
-    width: 280px;
+    min-width: 300px;
+    max-width: 400px;
     height: 180px;
     /* background: #e2e2e2; */
     border-radius: 16px;
     display: flex;
     flex-direction: column;
+    row-gap: 2%;
     justify-content: center;
     justify-items: center;
+    /* border: 2px solid red; */
 }
+
 .box-icon img {
-    width: 8vw;
+    width: 8rem;
+    height: 8rem;
 }
 .box-icon img:hover {
     cursor: pointer;
@@ -26,4 +31,14 @@
 .box-title {
     font-weight: bold;
     color: var(--textColor--);
+}
+.box-title p {
+    font-size: 24px;
+    color: var(--mainColor--);
+    background-color: var(--textColor--);
+}
+.box-description p {
+    font-size: 16px;
+    text-wrap: wrap;
+    background-color: var(--hoverLink--);
 }

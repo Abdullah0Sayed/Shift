@@ -5,7 +5,10 @@
     --textColor--: #ffffff;
     --hoverLink--: #916bb8;
 }
-
+.about-body {
+    display: flex;
+    flex-direction: column;
+}
 .aboutus {
     padding: 4%;
     background-color: var(--secondColor--);

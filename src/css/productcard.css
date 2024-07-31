@@ -7,20 +7,20 @@
     --hoverLink--: #916bb8;
 }
 
-.card {
-    background-color: transparent;
+.product-card {
+    /* border: solid 1px red; */
+    /* background-color: var(--mainColor--); */
+    border-radius: 16px;
+    width: 300px;
 }
-.card:hover img {
-    transform: scale(1.1,1.1);
-    transition: 0.4s 0.1s ease-in-out;
-}
+
 .card-title {
     color: var(--textColor--);
     font-weight: bold;
     font-size: 24px;
 }
 .card-price {
-    padding: 4%;
+    /* padding: 4%; */
     background-color: var(--secondColor--);
     color: var(--textColor--);
     font-size: 18px;
@@ -31,13 +31,22 @@
     margin: 0;
     width: 100%;
     padding: 16px;
-    background-color: var(--mainColor--);
+    background-color: var(--textColor--);
     border: transparent;
-    color: var(--textColor--);
+    color: var(--secondColor--);
     font-weight: bold;
     font-size: 12px;
+}
+img:hover {
+    transform: scale(0.9,0.9);
+    transition: 0.4s 0.1s ease-in-out;
 }
 .button:hover {
     background-color: var(--textColor--);
     color: var(--mainColor--);
+}
+.product-body {
+   
+    display: flex;
+    flex-direction: column;
 }

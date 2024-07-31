@@ -32,7 +32,7 @@ function Home() {
         <>
         <div
           id="carouselExampleCaptions"
-          class="carousel slide .carousel-fade"
+          class="carousel slide .carousel-fade gallery-show"
           data-bs-ride="carousel"
         >
           <div class="carousel-indicators">
@@ -104,7 +104,7 @@ function Home() {
             <QuickLinkBox cols={5} heading="أعمالنا" desc="شاهد جميع أعمال SHIFT" bg="white" image={workIcon} />
 
             <SectionHeading heading="أحدث منتجاتنا"/>
-            <div className="row animate__animated animate__fadeInRight">
+            <div className="row gap-3 animate__animated animate__fadeInRight">
 
                 <ProductCard title="ملمع زجاج حراري" btn="تفاصيل المنتج" price="50" img={power}/>
                 <ProductCard title="ملمع زجاج حراري" btn="تفاصيل المنتج" price="50" img={power}/>
