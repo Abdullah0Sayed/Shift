@@ -1,12 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+:root {
+  --mainColor--: #9933FF;
+  --secondColor--: #19191b;
+  --thirdColor--: #000000;
+  --textColor--: #ffffff;
+  --hoverLink--: #916bb8;
+}
 
 body {
   margin: 0;
+  direction: rtl;
   font-family: "Cairo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--secondColor--);
 }
 
 code {

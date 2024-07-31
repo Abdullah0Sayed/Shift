@@ -1,0 +1,47 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+    --animate-duration: 2000ms;
+    --animate-delay: 0.1s;
+}
+
+.nav {
+    
+    background-color: var(--secondColor--);
+    border: 2px solid;
+    border-bottom-color: var(--mainColor--);
+}
+.logo {
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: var(--animate-duration); /* don't forget to set a duration! */
+  }
+.nav a {
+    color: var(--textColor--);
+}
+
+.nav a:hover {
+    color: var(--hoverLink--);
+    transform: scale(0.9,0.9);
+    transition: 0.4s 0.1s ease-in-out;
+}
+
+.navbar-nav li.nav-item a.nav-link.active {
+    color: var(--mainColor--);
+    font-weight: bold;
+}
+
+.nav-item.dropdown a.nav-link.dropdown-toggle.show {
+    color: var(--mainColor--);
+}
+
+.dropdown-menu li a {
+    color: var(--secondColor--);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--mainColor--);
+    color: var(--secondColor--);
+}

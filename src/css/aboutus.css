@@ -1,0 +1,24 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+
+.aboutus {
+    padding: 4%;
+    background-color: var(--secondColor--);
+}
+.aboutus .card-image img{
+    width: 450px;
+    height: 250px;
+}
+.card-title {
+    font-weight: bold;
+    color: var(--mainColor--);
+}
+.card-text {
+    text-align: justify;
+    color: var(--textColor--);
+}

@@ -1,0 +1,15 @@
+
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+    --animate-duration: 2000ms;
+    --animate-delay: 0.1s;
+}
+
+.slide-heading {
+    color: var(--mainColor--);
+    font-weight: bold;
+}

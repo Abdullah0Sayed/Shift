@@ -1,0 +1,45 @@
+
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+
+.section-heading {
+    /* background-color: var(--hoverLink--); */
+    margin: 2% 0 2% 0;
+    padding: 0.5rem;
+    /* border: solid 4px;
+    border-bottom-color: var(--hoverLink--);
+    border-top-color: var(--hoverLink--);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4rem; */
+    position: relative;
+}
+.section-heading .heading {
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--textColor--);
+    
+}
+.heading::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 4%;
+    width: 28vw;
+    height: 4px;
+    background-color: var(--textColor--);
+}
+.heading::before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    right: 4%;
+    width: 28vw;
+    height: 4px;
+    background-color: var(--textColor--);
+}

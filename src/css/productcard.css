@@ -1,0 +1,43 @@
+
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+
+.card {
+    background-color: transparent;
+}
+.card:hover img {
+    transform: scale(1.1,1.1);
+    transition: 0.4s 0.1s ease-in-out;
+}
+.card-title {
+    color: var(--textColor--);
+    font-weight: bold;
+    font-size: 24px;
+}
+.card-price {
+    padding: 4%;
+    background-color: var(--secondColor--);
+    color: var(--textColor--);
+    font-size: 18px;
+    border-radius: 4px;
+    
+}
+.button {
+    margin: 0;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--mainColor--);
+    border: transparent;
+    color: var(--textColor--);
+    font-weight: bold;
+    font-size: 12px;
+}
+.button:hover {
+    background-color: var(--textColor--);
+    color: var(--mainColor--);
+}

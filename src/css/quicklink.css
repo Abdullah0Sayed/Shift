@@ -1,0 +1,54 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+
+.box-purble {
+    background-color: var(--mainColor--);
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    row-gap: 4px;
+    padding: 4rem;
+    align-items: center;
+    border-radius: 16px;
+}
+.box-white {
+    background-color: var(--textColor--);
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    row-gap: 4px;
+    padding: 4rem;
+    align-items: center;
+    border-radius: 16px;
+}
+.box-purble:hover , .box-white:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s 0.1s ease-in;
+}
+.box-purble .quick-link-box-heading {
+    font-weight: bold;
+    font-size: 64px;
+    color: var(--textColor--);
+}
+.box-white .quick-link-box-heading {
+    font-weight: bold;
+    font-size: 64px;
+    color: var(--mainColor--);
+}
+.quick-link-box-desc {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--secondColor----);
+}
+.quick-link-box-icon {
+   width: 80px;
+   height: 80px;
+}
