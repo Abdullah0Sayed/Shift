@@ -13,11 +13,11 @@
 }
 
 .collapsed {
-    background-color: var(--secondColor--);
+    /* background-color: var(----); */
     color: var(--mainColor--);
 }
 .accordion-item {
-    background-color: var(--secondColor--);
+    background-color: var(--hoverLink--);
 }
 .accordion-body {
     color: var(--textColor--);

@@ -9,17 +9,22 @@
 }
 
 .nav {
-    
-    background-color: var(--secondColor--);
+    position: sticky;
+    top: 0;
+    z-index: 10000000000000000000;
+    background-color: var(--textColor--);
     border: 2px solid;
     border-bottom-color: var(--mainColor--);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
 }
 .logo {
     animation: bounce; /* referring directly to the animation's @keyframe declaration */
     animation-duration: var(--animate-duration); /* don't forget to set a duration! */
   }
 .nav a {
-    color: var(--textColor--);
+    color: var(--secondColor--);
 }
 
 .nav a:hover {

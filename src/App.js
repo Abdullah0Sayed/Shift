@@ -11,6 +11,9 @@ import Footer from "./components/Footer";
 import Aboutus from "./components/Aboutus";
 import Questions from "./components/Questions";
 import Home from "./components/Home";
+import Contactus from "./components/Contatcus";
+import Complaints from "./components/Complaints";
+import OurLocation from "./components/OurLocation";
 
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/about-us" element={<Aboutus />}></Route>
             <Route path="/questions" element={<Questions />}></Route>
+            <Route path="/contact-us" element={<Contactus />}></Route>
+            <Route path="/complaints" element={<Complaints />}></Route>
+            <Route path="/our-loaction" element={<OurLocation />}></Route>
           </Routes>
         </div>
       </div>

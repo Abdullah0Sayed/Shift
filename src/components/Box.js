@@ -2,15 +2,16 @@
 import '../css/box.css';
 function Box(props) {
     return (
-        <div class="box">
-            <div class="box-icon">
+        <div className="box">
+           
+            <div className="box-title">
+                <p className='m-0 p-2'>{props.title}</p>
+            </div>
+            <div className="box-icon">
                 <img src={props.icon} alt=""/>
             </div>
-            <div class="box-title">
-                <p>{props.title}</p>
-            </div>
-            <div class="box-description">
-                <p>{props.description}</p>
+            <div className="box-description">
+                <p className='m-0 px-4 py-2'>{props.description}</p>
             </div>
         </div>
     );

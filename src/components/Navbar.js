@@ -87,41 +87,19 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
-                مستلزمات شيفت
+                مستلزمات SHIFT
               </a>
             </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                قطاع الاعمال
-              </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    الامتياز التجارى
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    الشراكات والعقود
-                  </a>
-                </li>
-              </ul>
-            </li>
+            
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
-                فروعنا
-              </a>
+              <Link className="nav-link" aria-current="page" to="/our-loaction">
+                فرعنا الرئيسي
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
-                to="#"
+                to=""
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -130,20 +108,16 @@ function Navbar() {
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/contact-us">
                     استفسارات
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/Complaints">
                     شكاوى
                   </a>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    التوظيف
-                  </a>
-                </li>
+                
               </ul>
             </li>
           </ul>

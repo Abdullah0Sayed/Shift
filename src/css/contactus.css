@@ -1,0 +1,81 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+.form-switch .form-check-input {
+    width: 4em;
+    height: 2em;
+    margin-left: -2.5em;
+    background-color: var(--mainColor--);
+    background-position: left center;
+    border-radius: 2em;
+    transition: background-position .15s ease-in-out;
+}
+
+.form-switch label {
+
+    color: var(--textColor--);
+}
+.button {
+    background-color: var(--mainColor--);
+    border-radius: 8px;
+    color: var(--textColor--);
+    font-size: 18px;
+}
+.button:hover {
+    background-color: var(--textColor--);
+    color: var(--mainColor--);
+    transition: 0.3s 0.1s ease-in-out;
+}
+.callcenterBox {
+    /* background-color: var(--textColor--); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-heading {
+    color: var(--mainColor--);
+    font-weight: bold;
+    font-size: 40px;
+}
+.contact-body {
+    color: var(--secondColor--);
+    font-weight: bold;
+    font-size: 16px;
+}
+.callcenterBoxHeadingTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2%;
+}
+
+@keyframes movingInfinity {
+    from {transform: scale(1,1);}
+    to {transform: scale(1.4,1.4);}
+  }
+  .callcenter {
+    width: 20em;
+    animation-name: movingInfinity;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+
+.form-select {
+    color: var(--hoverLink--);
+    font-weight: bold;
+}
+.form-select option:hover {
+    background-color: var(--mainColor--);
+}
+
+.form-button {
+    border: transparent;
+    font-weight: bold;
+}

@@ -5,20 +5,26 @@
     --textColor--: #ffffff;
     --hoverLink--: #916bb8;
 }
-
+.about-body {
+    display: flex;
+    flex-direction: column;
+}
 .aboutus {
     padding: 4%;
-    background-color: var(--secondColor--);
+    background-color: transparent;
+    border: transparent;
 }
 .aboutus .card-image img{
     width: 450px;
     height: 250px;
 }
-.card-title {
+.aboutus .card-title {
     font-weight: bold;
+    font-size: 2em;
     color: var(--mainColor--);
+    line-height: 1.8;
 }
 .card-text {
     text-align: justify;
-    color: var(--textColor--);
+    color: var(--secondColor--);
 }
