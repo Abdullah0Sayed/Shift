@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/shift/static/css/main.54acb8c3.css",
+    "main.js": "/shift/static/js/main.d6527e4f.js",
+    "static/js/453.a4866684.chunk.js": "/shift/static/js/453.a4866684.chunk.js",
+    "static/media/workinghours.gif": "/shift/static/media/workinghours.867befad9afe23b9b89a.gif",
+    "static/media/time.gif": "/shift/static/media/time.bffb37c64be7346e468e.gif",
+    "static/media/location.gif": "/shift/static/media/location.94a4fd46a31a88b3ab75.gif",
+    "static/media/car3.jpg": "/shift/static/media/car3.8e7ab84d1614f06da44a.jpg",
+    "static/media/car2.jpg": "/shift/static/media/car2.c61cfb5d09d5e6bff501.jpg",
+    "static/media/email.gif": "/shift/static/media/email.d60d6d9c172f537fce1e.gif",
+    "static/media/loading.gif": "/shift/static/media/loading.b3035fb95ae4b83171d0.gif",
+    "static/media/car1.jpg": "/shift/static/media/car1.1363cf0a64d997809fd1.jpg",
+    "static/media/power.webp": "/shift/static/media/power.85468e0959416c13ba3b.webp",
+    "static/media/retoutch.webp": "/shift/static/media/retoutch.78331d6cedb9f08bd205.webp",
+    "static/media/logo.svg": "/shift/static/media/logo.cedc284c833881083062b4afb2f25fc6.svg",
+    "index.html": "/shift/index.html",
+    "main.54acb8c3.css.map": "/shift/static/css/main.54acb8c3.css.map",
+    "main.d6527e4f.js.map": "/shift/static/js/main.d6527e4f.js.map",
+    "453.a4866684.chunk.js.map": "/shift/static/js/453.a4866684.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54acb8c3.css",
+    "static/js/main.d6527e4f.js"
+  ]
+}
