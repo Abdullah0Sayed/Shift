@@ -1,0 +1,35 @@
+.search-form {
+    display: flex;
+    gap: 1em;
+}
+.search-input {
+    min-width: 32em;
+    outline: none;
+    padding-right: 1em;
+    border: 1px solid transparent;
+    border-radius: 16px;
+}
+.search-form button     {
+    outline: none;
+    border: 1px solid var(--mainColor--);
+    width: 6em;
+    padding: 4px 8px;
+    border-radius: 16px;
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--mainColor--);
+}
+.btn-sorting {
+    padding: 4px 8px;
+    border: 1px solid var(--mainColor--);
+    background-color: var(--textColor--);
+    border-radius: 16px;
+}
+.search-form button:hover , .btn-sorting:hover {
+    background-color: var(--mainColor--);
+    transition: 0.4s 0.1s ease-in-out;
+    color: var(--textColor--);
+}
+.products-list {
+    gap: 16px;
+}

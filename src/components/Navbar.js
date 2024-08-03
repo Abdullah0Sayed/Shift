@@ -60,7 +60,7 @@ function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                اعمالنا
+                معرض الأعمال
               </Link>
               <ul className="dropdown-menu">
                 <li>
@@ -85,10 +85,28 @@ function Navbar() {
                 الضمان
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
-                مستلزمات SHIFT
-              </a>
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                متجر SHIFT
+              </Link>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/our-products">
+                  منتجاتنا
+                  </Link>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                   خدماتنا
+                  </a>
+                </li>
+              </ul>
             </li>
             
             <li className="nav-item">

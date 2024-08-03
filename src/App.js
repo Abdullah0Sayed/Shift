@@ -14,6 +14,7 @@ import Home from "./components/Home";
 import Contactus from "./components/Contatcus";
 import Complaints from "./components/Complaints";
 import OurLocation from "./components/OurLocation";
+import OurProducts from "./components/OurProducts";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/contact-us" element={<Contactus />}></Route>
             <Route path="/complaints" element={<Complaints />}></Route>
             <Route path="/our-loaction" element={<OurLocation />}></Route>
+            <Route path="/our-products" element={<OurProducts />}></Route>
           </Routes>
         </div>
       </div>

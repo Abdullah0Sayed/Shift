@@ -77,15 +77,15 @@ function Complaints() {
                     <label for="floatingTextarea2" className="px-4">محتوى الشكوى / المقترح</label>
                 </div>
                 <div>
-                    <label for="formFileLg" class="form-label">صورة الفاتورة (إن وجدت)</label>
+                    <label for="formFileLg" class="form-label">صورة الفاتورة (إختياري)</label>
                     <input class="form-control form-control-lg" id="formFileLg" type="file"/>
                 </div>
                 <div>
-                    <label for="formFileLg" class="form-label">صورة الضمان (إن وجد)</label>
+                    <label for="formFileLg" class="form-label">صورة الضمان (إختياري)</label>
                     <input class="form-control form-control-lg" id="formFileLg" type="file"/>
                 </div>
                 <div>
-                    <label for="formFileLg" class="form-label">صورة التلفيات (إن وجد)</label>
+                    <label for="formFileLg" class="form-label">صورة التلفيات (إختياري)</label>
                     <input class="form-control form-control-lg" id="formFileLg" type="file"/>
                 </div>
                 <div class="form-check form-switch">
