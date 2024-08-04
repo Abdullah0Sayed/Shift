@@ -11,13 +11,13 @@
     /* border: solid 1px red; */
     /* background-color: var(--mainColor--); */
     border-radius: 16px;
-    width: 300px;
+    min-width: 300px;
    
    
 }
 
 .card-title {
-    color: var(--hoverLink--);
+    color: var(--secondColor--);
     font-weight: bold;
     font-size: 24px;
 }
@@ -38,7 +38,7 @@
     font-weight: bold;
     font-size: 12px;
 }
-img:hover {
+.product-card img:hover {
     transform: scale(0.9,0.9);
     transition: 0.4s 0.1s ease-in-out;
 }

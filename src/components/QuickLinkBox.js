@@ -2,7 +2,7 @@ import "../css/quicklink.css";
 
 function QuickLinkBox(props) {
   return (
-    <div className={"col-" + props.cols}>
+    <div className="col-md-5 col-sm-1">
       <div className={"box-" + props.bg}>
         <div>
           <h1 className="quick-link-box-heading">{props.heading}</h1>

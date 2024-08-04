@@ -3,7 +3,7 @@ import '../css/productcard.css';
 
 function ProductCard(props) {
   return (
-    <div className="card col-3 product-card">
+    <div className="card col-md-2 col-sm-1 product-card ">
       <img src={props.img} className="card-img-top" alt="..." />
       <div className="card-body product-body">
         <h5 className="card-title text-center mb-1">{props.title}</h5>

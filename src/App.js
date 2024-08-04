@@ -26,8 +26,8 @@ function App() {
     <>
       
       <Navbar />
-      <div className="App container">
-        <div className="row">
+      <div className="App">
+       
         
           <Routes>
             
@@ -40,7 +40,7 @@ function App() {
             <Route path="/our-products" element={<OurProducts />}></Route>
           </Routes>
         </div>
-      </div>
+      
       <Footer />
     </>
 

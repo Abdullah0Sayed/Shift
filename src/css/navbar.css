@@ -50,3 +50,26 @@
     background-color: var(--mainColor--);
     color: var(--secondColor--);
 }
+
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    /* background-color: var(--secondColor--); */
+    /* border: 1px solid var(--secondColor--); */
+    /* border: 1px solid transparent; */
+    border-radius: .25rem;
+    transition: box-shadow .15s ease-in-out;
+} 
+
+.navbar-toggler-icon {
+    display: inline-block;
+    color: var(--hoverLink--);
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}

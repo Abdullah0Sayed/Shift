@@ -9,7 +9,7 @@
 
 .section-heading {
     /* background-color: var(--hoverLink--); */
-    margin: 2% 0 2% 0;
+    margin: 1% 0 1% 0;
     padding: 0.5rem;
     /* border: solid 4px;
     border-bottom-color: var(--hoverLink--);
@@ -18,10 +18,14 @@
     border-left-color: transparent;
     border-radius: 4rem; */
     position: relative;
+    display: flex;
+    justify-content: center;
+    /* background-color: var(--hoverLink--); */
 }
+
 .section-heading .heading {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3em;
     color: var(--secondColor--);
     
 }
@@ -30,7 +34,7 @@
     position: absolute;
     bottom: 50%;
     left: 4%;
-    width: 24%;
+    width: 30%;
     height: 4px;
     background-color: var(--mainColor--);
 }
@@ -39,7 +43,34 @@
     position: absolute;
     bottom: 50%;
     right: 4%;
-    width: 24%;
+    width: 30%;
     height: 4px;
     background-color: var(--mainColor--);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    .heading::after {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        left: 4%;
+        width: 16%;
+        height: 4px;
+        background-color: var(--mainColor--);
+    }
+    .heading::before {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        right: 4%;
+        width: 16%;
+        height: 4px;
+        background-color: var(--mainColor--);
+    }
+    .section-heading .heading {
+        font-weight: bold;
+        font-size: 1em;
+        color: var(--secondColor--);
+        
+    }
 }

@@ -7,6 +7,7 @@
 }
 
 .box-purble {
+    /* width: 24em; */
     background-color: var(--mainColor--);
     display: flex;
     flex-direction: row;
@@ -18,6 +19,7 @@
     border-radius: 16px;
 }
 .box-white {
+    
     background-color: var(--textColor--);
     display: flex;
     flex-direction: row;
@@ -35,12 +37,12 @@
 }
 .box-purble .quick-link-box-heading {
     font-weight: bold;
-    font-size: 64px;
+    font-size: 48px;
     color: var(--textColor--);
 }
 .box-white .quick-link-box-heading {
     font-weight: bold;
-    font-size: 64px;
+    font-size: 48px;
     color: var(--mainColor--);
 }
 .quick-link-box-desc {

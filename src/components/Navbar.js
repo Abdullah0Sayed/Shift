@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"; // Import Link for routing
 import logo from "../images/logo.svg";
 import "../css/navbar.css";
 import "../css/logo.css";
+import menubar from '../images/menuBar.png';
 
 function Navbar() {
   return (
@@ -20,7 +21,7 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+         <span class="navbar-toggler-icon"><img src={menubar} alt=""/></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
@@ -81,32 +82,14 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to={'/our-products'}>
+                منتجاتنا
+              </Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
                 الضمان
               </a>
-            </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                متجر SHIFT
-              </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link className="dropdown-item" to="/our-products">
-                  منتجاتنا
-                  </Link>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                   خدماتنا
-                  </a>
-                </li>
-              </ul>
             </li>
             
             <li className="nav-item">

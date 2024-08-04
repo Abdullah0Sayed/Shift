@@ -55,13 +55,31 @@
     row-gap: 2%;
 }
 
-@keyframes movingInfinity {
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    .callcenter {
+        width: 5em;
+        animation-name: movingSmScreeenInfinity;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+    .contact-heading {
+        color: var(--mainColor--);
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
+
+@keyframes movingLgScreeenInfinity {
+    from {transform: scale(1,1);}
+    to {transform: scale(1.1,1.1);}
+  }
+@keyframes movingSmScreeenInfinity {
     from {transform: scale(1,1);}
     to {transform: scale(1.4,1.4);}
   }
   .callcenter {
     width: 20em;
-    animation-name: movingInfinity;
+    animation-name: movingLgScreeenInfinity;
     animation-duration: 8s;
     animation-iteration-count: infinite;
 }
