@@ -15,6 +15,8 @@ import Contactus from "./components/Contatcus";
 import Complaints from "./components/Complaints";
 import OurLocation from "./components/OurLocation";
 import OurProducts from "./components/OurProducts";
+import WarrantyPolicy from "./components/WarrantyPolicy";
+import ProductDetails from "./components/ProductDetails";
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
             <Route path="/complaints" element={<Complaints />}></Route>
             <Route path="/our-loaction" element={<OurLocation />}></Route>
             <Route path="/our-products" element={<OurProducts />}></Route>
+            <Route path="/warranty-policy" element={<WarrantyPolicy />}></Route>
+            <Route path="/product-details" element={<ProductDetails />}></Route>
           </Routes>
         </div>
       

@@ -38,8 +38,8 @@
     font-size: 16px;
 }
 .input-number-range {
-    width: 8em;
-    height: 60px;
+    width: 6em;
+    height: 50px;
     border-radius: 16px;
     border: 1px solid var(--mainColor--);
     outline: none;
@@ -50,7 +50,8 @@
 }
 .range-price-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* gap: 4px; */
 }
 .show-results-btn {
     margin-top: 1em;

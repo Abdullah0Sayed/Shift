@@ -7,19 +7,64 @@
     --hoverLink--: #916bb8;
 }
 
-.questions {
-    padding: 4%;
-    
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    text-align: start;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
+}
+.accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: initial;
+   
+    background-image: url('../images/plusIcon.png');
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url('../images/minusIcon.png');
+    transform: rotate(-180deg);
 }
 
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: none;
+    outline: 0;
+    box-shadow:none;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--secondColor--);
+    font-weight: bold;
+    background-color: #e8e8e8;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+}
 .collapsed {
-    /* background-color: var(----); */
+    /* background-color: ; */
     color: var(--mainColor--);
+    font-weight: bold;
 }
 .accordion-item {
     background-color: var(--hoverLink--);
+    border-bottom: 1px solid #e2e2e2;
+    
 }
 .accordion-body {
     color: var(--textColor--);
-    border: 1px solid var(--hoverLink--);
+    /* border: 1px solid var(--hoverLink--); */
+    text-align: justify;
 }

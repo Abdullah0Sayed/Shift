@@ -87,9 +87,9 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
+              <Link className="nav-link" aria-current="page" to={'/warranty-policy'}>
                 الضمان
-              </a>
+              </Link>
             </li>
             
             <li className="nav-item">
@@ -129,3 +129,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

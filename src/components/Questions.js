@@ -1,9 +1,11 @@
 import '../css/questions.css';
+import SectionHeading from "./SectionHeading";
 
 function Questions() {
   return (
     <div className='container'>
       <div className='row'>
+      <SectionHeading heading="من استفسارتكم"></SectionHeading>
         <div class="accordion accordion-flush questions animate__animated animate__fadeInRight" id="accordionFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header">

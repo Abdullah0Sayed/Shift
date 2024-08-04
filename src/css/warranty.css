@@ -1,0 +1,38 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #19191b ;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: #926bb888;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+.table thead {
+    padding-right: 2%;
+}
+.table body {
+    padding-right: 2%;
+}
+.table tbody tr {
+    color: var(--secondColor--);
+}
+.table-active {
+    /* --bs-table-accent-bg: var(--bs-table-active-bg); */
+    /* border-radius: 16px; */
+    background-color: var(--textColor--);
+    color: var(--mainColor--);
+}
