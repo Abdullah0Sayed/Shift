@@ -7,7 +7,7 @@
 }
 
 .sidebar {
-    min-width: 24em;
+    min-width: 18em;
     padding: 4em 2em 4em 2em;
     /* max-width: 320em; */
     background-color: var(--textColor--);

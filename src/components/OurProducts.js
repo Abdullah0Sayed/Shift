@@ -3,8 +3,9 @@ import Sidebar from "./Sidebar";
 import "../css/ourproducts.css";
 function OurProducts() {
   return (
+    <div className="container">
     <div className="row">
-      <div className="col-9">
+      <div className="col-md-9 col-sm-1">
         <div className="search-bar">
           <form className="search-form">
             <input
@@ -16,7 +17,7 @@ function OurProducts() {
             <button type="submit">بحث</button>
             <div className="dropdown">
               <a
-                className="btn btn-sorting dropdown-toggle p-4"
+                className="btn btn-sorting dropdown-toggle"
                 href="#"
                 role="button"
                 id="dropdownMenuLink"
@@ -25,7 +26,7 @@ function OurProducts() {
               >
                 ترتيب حسب
               </a>
-
+            
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
                   <a className="dropdown-item" href="#">
@@ -41,7 +42,7 @@ function OurProducts() {
             </div>
           </form>
         </div>
-        <div className="row products-list">
+        <div className="row justify-content-center products-list">
           <ItemBox />
           <ItemBox />
           <ItemBox />
@@ -52,10 +53,12 @@ function OurProducts() {
 
        
       </div>
-      <div className="col-3">
+      <div className="col-md-3 col-sm-1 justify-content-center">
         <Sidebar />
       </div>
     </div>
+    </div>
+
   );
 }
 
