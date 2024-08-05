@@ -53,28 +53,10 @@ function Navbar() {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                to="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                معرض الأعمال
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link className="dropdown-item" to={'/our-works-gallery'}>
-                    مركز الصور
-                  </Link>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    مركز الفيديو
-                  </a>
-                </li>
-              </ul>
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/our-works">
+                معرض أعمالنا
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">

@@ -45,7 +45,7 @@ function App() {
             <Route path="/warranty-policy" element={<WarrantyPolicy />}></Route>
             <Route path="/product-details" element={<ProductDetails />}></Route>
             <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-            <Route path="/our-works-gallery" element={<Gallery />}></Route>
+            <Route path="/our-works" element={<Gallery />}></Route>
           </Routes>
         </div>
       
