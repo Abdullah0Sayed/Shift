@@ -17,6 +17,8 @@ import OurLocation from "./components/OurLocation";
 import OurProducts from "./components/OurProducts";
 import WarrantyPolicy from "./components/WarrantyPolicy";
 import ProductDetails from "./components/ProductDetails";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import Gallery from "./components/Gallery";
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
             <Route path="/our-products" element={<OurProducts />}></Route>
             <Route path="/warranty-policy" element={<WarrantyPolicy />}></Route>
             <Route path="/product-details" element={<ProductDetails />}></Route>
+            <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
+            <Route path="/our-works-gallery" element={<Gallery />}></Route>
           </Routes>
         </div>
       

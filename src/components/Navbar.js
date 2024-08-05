@@ -54,7 +54,7 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <Link
+              <a
                 className="nav-link dropdown-toggle"
                 to="#"
                 role="button"
@@ -62,12 +62,12 @@ function Navbar() {
                 aria-expanded="false"
               >
                 معرض الأعمال
-              </Link>
+              </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={'/our-works-gallery'}>
                     مركز الصور
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">

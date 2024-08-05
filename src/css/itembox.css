@@ -39,6 +39,7 @@
     height: 200px;
 }
 .item .item-btn-details {
+    width: 100%;
     border: 1px solid transparent;
     outline: none;
     background-color: var(--mainColor--);

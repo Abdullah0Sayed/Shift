@@ -34,7 +34,7 @@
     position: absolute;
     bottom: 50%;
     left: 4%;
-    width: 30%;
+    width: 24%;
     height: 4px;
     background-color: var(--mainColor--);
 }
@@ -43,7 +43,7 @@
     position: absolute;
     bottom: 50%;
     right: 4%;
-    width: 30%;
+    width: 24%;
     height: 4px;
     background-color: var(--mainColor--);
 }
@@ -54,7 +54,7 @@
         position: absolute;
         bottom: 50%;
         left: 4%;
-        width: 16%;
+        width: 12%;
         height: 4px;
         background-color: var(--mainColor--);
     }
@@ -63,7 +63,7 @@
         position: absolute;
         bottom: 50%;
         right: 4%;
-        width: 16%;
+        width: 12%;
         height: 4px;
         background-color: var(--mainColor--);
     }

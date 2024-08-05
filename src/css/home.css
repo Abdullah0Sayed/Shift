@@ -14,3 +14,26 @@
     color: var(--mainColor--);
     font-weight: bold;
 }
+
+@media Only Screen and (min-width: 425px) {
+    .d-md-block {
+        display: block !important;
+    }
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    background-color: var(--mainColor--);
+    border-radius: 50%;
+}
+.carousel-control-next-icon {
+    background-image: url('../images/arrowRight.png');
+}
+.carousel-control-prev-icon {
+    background-image: url('../images/arrowLeft.png');
+}

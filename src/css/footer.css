@@ -42,11 +42,47 @@
     background-color: var(--mainColor--);
     color: var(--textColor--);
 }
-.links {
-    display: grid;
-    grid-template-columns: repeat(4,auto);
+.following-payments {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    padding: 1%;
+}
+.links, .payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.50rem 0;
+    gap: 4%;
+}
+.following, .payments {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    min-width: 32rem;
+    border: 2px solid var(--mainColor--);
+    border-radius: 1rem;
+    
+}
+.following-title , .payments-title {
+    font-size: 14px;
+    padding: 0;
+    color: var(--secondColor--);
+    font-weight: bold;
+    margin: 0;
+}
+
+.payment-icon {
+    width: 2rem;
+    position: relative;
+}
+.payment-icon:hover {
+    transform: scale(1.1,1.1);
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+.privacy-policy {
+    text-decoration: none;
 }

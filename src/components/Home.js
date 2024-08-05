@@ -22,7 +22,7 @@ function Home() {
     setloading(true);
     setTimeout(() => {
       setloading(false);
-    }, 2000);
+    }, 3200);
   }, []);
 
   return (
@@ -118,12 +118,12 @@ function Home() {
 
             </div>
             <SectionHeading heading="خدمتنا" />
-            <div className="row gap-3 animate__animated animate__fadeInRight">
-
-              <ServiceBox image={retoutch} heading={"خدمة التلميع"} />
-              <ServiceBox image={retoutch} heading={"خدمة التلميع"} />
-              <ServiceBox image={retoutch} heading={"خدمة التلميع"} />
-              <ServiceBox image={retoutch} heading={"خدمة التلميع"} />
+            <div className="row gap-3 animate__animated animate__fadeInRight justify-content-center">
+              
+              <ServiceBox image={retoutch}  serviceTitle="خدمة تلميع" serviceWarranty="ضمان 4 سنوات"/>
+              <ServiceBox image={retoutch}  serviceTitle="خدمة عزل" serviceWarranty="ضمان 5 سنوات"/>
+              <ServiceBox image={retoutch}  serviceTitle="خدمة نانو" serviceWarranty="ضمان 4 سنوات"/>
+              <ServiceBox image={retoutch}  serviceTitle="خدمة افلام حماية" serviceWarranty="ضمان 4 سنوات"/>
 
 
             </div>

@@ -1,6 +1,8 @@
 import ItemBox from "./ItemBox";
 import Sidebar from "./Sidebar";
 import "../css/ourproducts.css";
+
+
 function OurProducts() {
   return (
     <div className="container">
@@ -43,12 +45,12 @@ function OurProducts() {
           </form>
         </div>
         <div className="row justify-content-center products-list">
-          <ItemBox />
-          <ItemBox />
-          <ItemBox />
-          <ItemBox />
-          <ItemBox />
-          <ItemBox />
+          <ItemBox itemTitle="منتج"/>
+          <ItemBox itemTitle="منتج"/>
+          <ItemBox itemTitle="منتج"/>
+          <ItemBox itemTitle="منتج"/>
+          <ItemBox itemTitle="منتج"/>
+          <ItemBox itemTitle="منتج"/>
         </div>
 
        

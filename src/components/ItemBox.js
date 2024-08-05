@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/itembox.css';
 import product from '../images/headphone.webp';
 
@@ -17,7 +18,7 @@ function ItemBox(props) {
                         <p className='price-before-discount'>{props.priceBeforeDiscount + '  ر.س'}</p>
                     </div>
                 </div>
-                <button type="button" className='item-btn-details'>تفاصيل المنتج</button>
+                <Link to={'/product-details'}><button type="button" className='item-btn-details'>تفاصيل المنتج</button></Link>
             </div>
         </>
     );

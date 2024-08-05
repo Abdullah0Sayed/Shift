@@ -1,0 +1,24 @@
+.gallery {
+    column-count: 4;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    /* column-width: 40%;
+    -webkit-column-width: 40%;
+    -moz-column-width: 40%; */
+    padding: 0 18px;
+}
+.image-slice img {
+    width: 100%;
+    border-radius: 1rem;
+}
+.gallery .image-slice {
+    transition: all 350ms ease;
+    cursor: pointer;
+    margin-bottom: 8px;
+    border-radius: 1rem;
+}
+.gallery .image-slice:hover {
+    filter: opacity(0.8);
+    transition: all 350ms ease;
+}
+

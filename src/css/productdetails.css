@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid var(--mainColor--);
 }
 .image-cover img {
     width: 18em;
@@ -26,10 +27,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid var(--mainColor--);
+}
+.image-thumbnail:hover {
+    transform: scale(1.5 , 1);
+    transition: 0.4s 0.1s ease-in;
 }
 .image-thumbnail img {
     width: 6em;
 }
+
 
 .product-name {
     font-size: 2em;

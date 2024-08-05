@@ -8,7 +8,7 @@
 }
 
 .product-card {
-    /* border: solid 1px red; */
+    border: solid 2px var(--mainColor--);
     /* background-color: var(--mainColor--); */
     border-radius: 16px;
     min-width: 300px;
