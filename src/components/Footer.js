@@ -27,6 +27,8 @@ import { Link } from 'react-router-dom';
 
 
 function Footer() {
+    let date = new Date();
+    let currentYear = date.getFullYear();
     return (
         <div className=''>
            
@@ -67,7 +69,7 @@ function Footer() {
                     
                     <Link to={'/privacy-policy'} className='privacy-policy'><p className='p-2 m-0 text-dark'>سياسة الخصوصية</p></Link>
                     <div class="card-footer ">
-                        جميع الحقوق محفوظة لدى SHIFT
+                        <span>&copy;{currentYear}</span>   جميع الحقوق محفوظة لدى SHIFT 
                     </div>
                 </div>
 

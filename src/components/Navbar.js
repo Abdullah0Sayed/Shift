@@ -47,9 +47,9 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/questions">
+                  <Link className="dropdown-item" to="/questions">
                     أسئلة واستفسارات
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -114,9 +114,9 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/Complaints">
+                  <Link className="dropdown-item" to="/Complaints">
                     شكاوى
-                  </a>
+                  </Link>
                 </li>
                 
               </ul>
