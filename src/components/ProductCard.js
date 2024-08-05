@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/productcard.css';
 
 
@@ -8,7 +9,7 @@ function ProductCard(props) {
       <div className="card-body product-body">
         <h5 className="card-title text-center mb-1">{props.title}</h5>
         <p className="card-price text-center mb-2">{props.price} ر.س</p>
-        <button  className="button p-2">{props.btn}</button>
+        <Link to={'/product-details'}><button  className="button p-2">{props.btn}</button></Link>
       </div>
     </div>
   );
