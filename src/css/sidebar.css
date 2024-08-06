@@ -28,7 +28,7 @@
 .filter-heading {
     color: var(--mainColor--);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 1em;
 }
 .range-price-from , .range-price-to {
@@ -78,3 +78,4 @@
     transition: 0.4s 0.1s ease-in-out;
     color: var(--textColor--);
 }
+

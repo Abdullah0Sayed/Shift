@@ -1,0 +1,30 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+.book-service-componnet {
+    width: 14rem;
+    height: 6rem;
+    background-color: var(--mainColor--);
+    border-radius: 0.25rem;
+    color: var(--textColor--);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+.book-service-componnet.active {
+    background-color: var(--textColor--);
+   border: 0.15rem solid var(--mainColor--);
+   color: var(--secondColor--);
+}

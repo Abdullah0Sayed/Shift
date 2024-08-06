@@ -8,14 +8,14 @@
 
 .search-form {
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
 }
 .search-input {
     min-width: 24em;
     outline: none;
     padding-right: 1em;
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 0.25rem;
 }
 .search-input:focus {
     border: 1px solid var(--mainColor--);
@@ -24,21 +24,23 @@
     margin-left: 2%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 425px) {
+@media only screen and (min-width: 320px) and (max-width: 580px) {
     .search-input {
-        min-width: 10em;
+        min-width: 8em;
         outline: none;
         padding-right: 1em;
         border: 1px solid transparent;
-        border-radius: 16px;
+        border-radius: 0.25rem;
     }
+   
+   
 }
 
 .search-form button     {
     outline: none;
     border: 1px solid var(--mainColor--);
    
-    padding: 4px 8px;
+    padding: 4px 16px;
     border-radius: 8px;
     background-color: transparent;
     font-weight: bold;
@@ -47,7 +49,8 @@
 .btn-sorting {
     /* padding: 4px 8px; */
     border: 1px solid var(--mainColor--);
-    background-color: var(--textColor--);
+    background-color: var(--mainColor--);
+    color: var(--textColor--);
     border-radius: 8px;
 }
 .search-form button:hover , .btn-sorting:hover {

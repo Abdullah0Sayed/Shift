@@ -7,6 +7,7 @@ function SectionHeading(props) {
         <div className="section-heading text-center">
 
             <h2 className='heading'>{props.heading}</h2>
+            <p className='heading-description'>{props.headingDescription}</p>
         </div>
     );
 

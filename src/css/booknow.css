@@ -1,0 +1,216 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+
+
+div.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+.layout {
+    width: 12rem;
+    height: 32rem;
+    border-radius: 0.25rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+    
+    
+}
+.layout > .layout-row > .layout-icon {
+    background-color: var(--mainColor--);
+    color: var(--textColor--);
+    border-radius: 0.25rem;
+    /* min-width: 8rem; */
+    max-width: 12rem;
+    padding: 0.25rem 0.10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.layout > .layout-row > .layout-description {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   color: black;
+   overflow: hidden;
+   height: 80px;
+   /* width: 520px; */
+   padding-right: 1rem;
+   padding-bottom: 1rem;
+   opacity: 0;
+   transform: translateY(30px);
+   transition-delay: .3s;
+   transition: all .3s ease;
+}
+.layout-description p {
+    font-weight: normal;
+    color: var(--textColor--);
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.layout-description h4 {
+    text-transform: uppercase;
+    color: var(--textColor--);
+}
+.wrapper-container input {
+    display: none;
+}
+.wrapper-container input:checked + label {
+    width: 50rem;
+
+}
+.wrapper-container input:checked + label .layout-description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.layout[for="c1"] {
+    background-image: url('../images/img5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+.layout[for="c2"] {
+    background-image: url('../images/img3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+.layout[for="c3"] {
+    background-image: url('../images/img6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.row {
+    margin: 2% 0 2%;
+    /* background-color: aqua; */
+}
+
+.payments-avaliable-ways {
+    padding: 2rem;
+    background-color: var(--textColor--);
+    border: 0.1rem solid transparent;
+    border-right-color: var(--mainColor--);
+    display: flex;
+    border-radius: 0.25rem;
+    
+    
+
+}
+.third-party-payments {
+    display: flex;
+    
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.third-party-payments h2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--mainColor--);
+    margin: 0;
+    
+}
+.third-party-payments .payments-ways {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+    
+
+}
+
+.third-party-payments .payments-ways img {
+    width: 5rem;
+}
+
+.book-confirm-btn {
+    outline: none;
+    padding: 0.8rem;
+    border-radius: 0.25rem;
+    background-color: var(--secondColor--);
+    border: transparent;
+    font-weight: bold;
+    color: var(--textColor--);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+.book-confirm-btn:hover {
+  
+    background-color: var(--mainColor--);
+    transition: 0.4s ease;
+    color: var(--textColor--);
+}
+.confirm-btn-icon {
+    width: 20px;
+}
+
+
+
+/* media screens  */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .layout {
+        width: 2rem;
+        height: 32rem;
+        border-radius: 0.25rem;
+        background-size: cover;
+        cursor: pointer;
+        overflow: hidden;
+        margin: 0 10px;
+        display: flex;
+        align-items: flex-end;
+        transition: .6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+        
+        
+    }
+    .wrapper-container input:checked + label {
+        width: 15rem;
+    
+    }
+    .third-party-payments .payments-ways img {
+        width: 2rem;
+    }
+    .wrapper-container input:checked + label .layout-description{
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        padding-bottom: 16px;
+        
+    }
+    
+    
+}

@@ -17,11 +17,11 @@
     border: 2px solid var(--mainColor--);
 }
 .image-cover img {
-    width: 18em;
+    width: 14em;
 }
 .image-thumbnail {
-    width: 6em;
-    height: 6em;
+    width: 4em;
+    height: 4em;
     background-color: var(--textColor--);
     border-radius: 16px;
     display: flex;
@@ -34,7 +34,7 @@
     transition: 0.4s 0.1s ease-in;
 }
 .image-thumbnail img {
-    width: 6em;
+    width: 4em;
 }
 
 
@@ -64,30 +64,38 @@ span.price-product {
 .feature {
    
     /* border: 2px solid var(--mainColor--); */
-   
-    padding: 4%;
+    /* min-width: 2em; */
+    padding: 0.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    border-radius: 0.25rem;
+    gap: 4px;
+    
    
 }
 .feature .feature-icon {
-    width: 5em;
-    height: 5em;
+    width: 4rem;
+    height: 4rem;
     border-radius: 16px;
     background-color: var(--textColor--);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 0.08rem solid var(--mainColor--);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .feature .feature-details {
-    font-weight: bold;
+    
     color: var(--mainColor--);
 }
 .feature .feature-name {
     font-weight: bold;
     color: var(--secondColor--);
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    /* box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25); */
 }

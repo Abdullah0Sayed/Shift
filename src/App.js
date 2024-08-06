@@ -19,6 +19,7 @@ import WarrantyPolicy from "./components/WarrantyPolicy";
 import ProductDetails from "./components/ProductDetails";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Gallery from "./components/Gallery";
+import BookNow from "./components/BookNow";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             <Route path="/product-details" element={<ProductDetails />}></Route>
             <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
             <Route path="/our-works" element={<Gallery />}></Route>
+            <Route path="/book-now" element={<BookNow />}></Route>
           </Routes>
         </div>
       

@@ -28,7 +28,7 @@ function OurProducts() {
     { id: 12, imgSrc: img6 , productName: 'high product' , productPriceAfterDiscount: 25.5 , productPriceBeforeDiscount: 43.5},
     { id: 13, imgSrc: img6 , productName: 'speed product' , productPriceAfterDiscount: 20 , productPriceBeforeDiscount: 40},
     { id: 14, imgSrc: img6 , productName: 'war product' , productPriceAfterDiscount: 159.5 , productPriceBeforeDiscount: 759.5},
-    // { id: 15, imgSrc: img6 , productName: 'test product' , productPriceAfterDiscount: 50 , productPriceBeforeDiscount: 40},
+    { id: 15, imgSrc: img6 , productName: 'test product' , productPriceAfterDiscount: 50 , productPriceBeforeDiscount: 40},
 ]
 
 
@@ -36,7 +36,7 @@ function OurProducts() {
     <div className="container">
     <div className="row">
       <div className="col-md-9 col-sm-1">
-        <div className="search-bar">
+        <div className="search-bar px-4">
           <form className="search-form">
             <input
               type="search"

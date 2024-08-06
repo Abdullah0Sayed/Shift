@@ -59,9 +59,9 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
+              <Link className="nav-link" aria-current="page" to="/book-now">
                 احجز اونلاين
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to={'/our-products'}>

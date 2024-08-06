@@ -60,7 +60,7 @@ function Footer() {
                                 <img src={visa} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام فيزا'/>
                                 <img src={masterCard} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام ماستر كارد'/>
                                 <img src={mada} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام شبكة مدى'/>
-                                <img src={tamara} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام تمارا'/>
+                                {/* <img src={tamara} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام تمارا'/> */}
                             </div>
                            
                         </div>
@@ -69,7 +69,8 @@ function Footer() {
                     
                     <Link to={'/privacy-policy'} className='privacy-policy'><p className='p-2 m-0 text-dark'>سياسة الخصوصية</p></Link>
                     <div class="card-footer ">
-                        <span>&copy;{currentYear}</span>   جميع الحقوق محفوظة لدى SHIFT 
+                       <span>جميع حقوق الملكية محفوظة لدى <span>shift</span> &copy; {currentYear} </span>
+                      
                     </div>
                 </div>
 

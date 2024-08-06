@@ -19,7 +19,7 @@ function Contactus() {
                             placeholder="أدخل اسمك الأول"
                             type="text"
                             id="firstname"
-                            inputFor="lastname"
+                            inputFor="firstname"
                         ></Input>
                     </div>
                     <div className="col-6">
@@ -71,7 +71,7 @@ function Contactus() {
                         <label class="form-check-label text-dark" for="clientForShift">عميل سابق لدى SHIFT ؟</label>
                     </div>
                     <div className="col-12">
-                        <button type="button" className="button form-button col-12 p-3">ارسال</button>
+                        <button type="submit" className="button form-button col-12 p-3">ارسال</button>
                     </div>
 
                 </from>

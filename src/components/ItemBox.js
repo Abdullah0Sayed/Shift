@@ -5,7 +5,7 @@ import product from '../images/headphone.webp';
 function ItemBox(props) {
     return(
         <>
-            <div className="item col-3">
+            <div className="item col-2">
                 <div className='item-image'>
                     <img src={props.itemImage} alt="image" className='product-image'/>
                 </div>

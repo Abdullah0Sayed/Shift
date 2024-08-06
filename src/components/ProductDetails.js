@@ -9,7 +9,7 @@ function ProductDetails() {
         <div className="container">
             <ProductDetailsCard productName="ملمع زجاج" productCover={productCover} productCategory="قسم المنتج" productCode="#Sh14258" productPrice="200"/>
             <SectionHeading heading="مميزات"/>
-            <div className='row features'>
+            <div className='row features gap-4 p-4'>
                    <FeatureBox featureIcon="icon" featureName="ضمان" featureDescription="وصف الخدمة"/>
                    <FeatureBox featureIcon="icon" featureName="ضمان" featureDescription="وصف الخدمة"/>
                    <FeatureBox featureIcon="icon" featureName="ضمان" featureDescription="وصف الخدمة"/>
@@ -23,7 +23,7 @@ function ProductDetails() {
 
             </div>
             <SectionHeading heading="منتجات مشابهة"/>
-            <div className='row similar-products'>
+            <div className='row gap-4 similar-products justify-content-center'>
                 <ItemBox itemTitle="منتج مشابه"/>
                 <ItemBox itemTitle="منتج مشابه"/>
                 <ItemBox itemTitle="منتج مشابه"/>
