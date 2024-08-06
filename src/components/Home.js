@@ -104,8 +104,8 @@ function Home() {
             <SectionHeading heading="تجربة فريدة" />
             <div className="row justify-content-evenly gap-2 ">
        
-            <QuickLinkBox  heading="إحجز الأن" desc="تمتع بتجربة فريدة مع SHIFT" bg="purble" image={bookingIcon} />
-            <QuickLinkBox  heading="أعمالنا" desc="شاهد جميع أعمال SHIFT" bg="white" image={workIcon} />
+            <QuickLinkBox  heading="إحجز الأن" desc="تمتع بتجربة فريدة مع SHIFT" bg="purble" image={bookingIcon} url="/book-now"/>
+            <QuickLinkBox  heading="أعمالنا" desc="شاهد جميع أعمال SHIFT" bg="white" image={workIcon} url="/our-works"/>
 
             <SectionHeading heading="أحدث منتجاتنا" />
             <div className="row justify-content-between gap-4 animate__animated animate__fadeInRight">
