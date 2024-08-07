@@ -1,6 +1,7 @@
 import car1 from "../images/car1.jpg";
 import car2 from "../images/car2.jpg";
 import car3 from "../images/car3.jpg";
+
 import power from "../images/power.webp";
 import bookingIcon from "../images/bookingIcon.png";
 import workIcon from "../images/workIcon.png";
@@ -10,7 +11,7 @@ import Loader from "./Loader";
 
 import { useEffect, useState } from "react";
 import SectionHeading from "./SectionHeading";
-import ProductCard from "./ProductCard";
+import ItemBox from "./ItemBox";
 import ServiceBox from "./ServiceBox";
 import QuickLinkBox from "./QuickLinkBox";
 import { Link } from "react-router-dom";
@@ -108,12 +109,12 @@ function Home() {
             <QuickLinkBox  heading="أعمالنا" desc="شاهد جميع أعمال SHIFT" bg="white" image={workIcon} url="/our-works"/>
 
             <SectionHeading heading="أحدث منتجاتنا" />
-            <div className="row justify-content-between gap-4 animate__animated animate__fadeInRight">
+            <div className="row justify-content-between gap-2 animate__animated animate__fadeInRight">
 
-              <ProductCard title="ملمع زجاج حراري" btn="تفاصيل المنتج" price="50" img={power} />
-              <ProductCard title="ملمع زجاج حراري" btn="تفاصيل المنتج" price="50" img={power} />
-              <ProductCard title="ملمع زجاج حراري" btn="تفاصيل المنتج" price="50" img={power} />
-              <ProductCard title="ملمع زجاج حراري" btn="تفاصيل المنتج" price="50" img={power} />
+            <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>
+            <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>
+            <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>
+            <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>
               
 
             </div>

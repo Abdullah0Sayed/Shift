@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/servicebox.css';
 
 
@@ -14,9 +15,12 @@ function ServiceBox(props) {
         <p className='service-warranty'>{props.serviceWarranty}</p>
 
         {/* <p className='service-warranty'>{props.serviceWarranty}</p> */}
-        
+
+        <Link to={'/service-details'}>
           <button className='btn btn-info py-2'>تفاصيل الخدمة</button>
-       
+
+        </Link>
+
       </div>
     </div>
   );

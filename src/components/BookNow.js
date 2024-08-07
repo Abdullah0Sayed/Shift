@@ -126,8 +126,8 @@ function BookNow() {
                         <h2>عند زيارتك لـ SHIFT يمكنك الدفع بإستخدام إحدى الطرق الأتية</h2>
                         <div className="payments-ways">
                             <img src={applePay} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام ابل اى باي' />
-                            <img src={visa} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام فيزا' />
-                            <img src={masterCard} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام ماستر كارد' />
+                            {/* <img src={visa} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام فيزا' /> */}
+                            {/* <img src={masterCard} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام ماستر كارد' /> */}
                             <img src={mada} alt="" class="payment-icon" title='يمكنك الدفع بإستخدام شبكة مدى' />
                             <img src={cash} alt="" class="payment-icon" title='يمكنك الدفع نقدياً (كاش)' />
                         </div>

@@ -20,6 +20,7 @@ import ProductDetails from "./components/ProductDetails";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Gallery from "./components/Gallery";
 import BookNow from "./components/BookNow";
+import ServiceDetails from "./components/ServiceDetails";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
             <Route path="/our-works" element={<Gallery />}></Route>
             <Route path="/book-now" element={<BookNow />}></Route>
+            <Route path="/service-details" element={<ServiceDetails />}></Route>
           </Routes>
         </div>
       

@@ -7,6 +7,7 @@ import ItemBox from './ItemBox';
 function ProductDetails() {
     return (
         <div className="container">
+            <SectionHeading heading="تفاصيل عامة"/>
             <ProductDetailsCard productName="ملمع زجاج" productCover={productCover} productCategory="قسم المنتج" productCode="#Sh14258" productPrice="200"/>
             <SectionHeading heading="مميزات"/>
             <div className='row features gap-4 p-4'>

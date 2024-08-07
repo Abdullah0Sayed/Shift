@@ -3,11 +3,11 @@ import '../css/itembox.css';
 import product from '../images/headphone.webp';
 
 function ItemBox(props) {
-    return(
+    return (
         <>
             <div className="item col-2">
                 <div className='item-image'>
-                    <img src={props.itemImage} alt="image" className='product-image'/>
+                    <img src={props.itemImage} alt="image" className='product-image' />
                 </div>
                 <div className='item-title-pricing'>
                     <div className='item-title'>
@@ -18,7 +18,10 @@ function ItemBox(props) {
                         <p className='price-before-discount'>{props.priceBeforeDiscount + '  ر.س'}</p>
                     </div>
                 </div>
-                <Link to={'/product-details'}><button type="button" className='item-btn-details'>تفاصيل المنتج</button></Link>
+                <div className='item-btn'>
+
+                    <Link to={'/product-details'}><button type="button" className='item-btn-details'>تفاصيل المنتج</button></Link>
+                </div>
             </div>
         </>
     );

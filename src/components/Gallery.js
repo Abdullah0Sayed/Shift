@@ -14,7 +14,7 @@ import img4 from '../images/img4.jpg';
 import img5 from '../images/img5.jpg';
 import img6 from '../images/img6.jpg';
 
-function Gallery() {
+function Gallery(props) {
     let imags = [
 
         { id: 1, imgSrc: img1 },
