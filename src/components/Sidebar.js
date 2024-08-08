@@ -10,14 +10,14 @@ function Sidebar() {
                    <FilterInputCheckBox labelFor="polished" label="ملمع سيارات" inputName="polished" />
                    <FilterInputCheckBox labelFor="Thermalinsulation" label="عازل حراري" inputName="Thermalinsulation" />
                 </div>
-                <hr/>
+
                
-                <div className='filter-by-date-posted'>
+                {/* <div className='filter-by-date-posted'>
                     <h4 className='filter-heading'>المضاف حديثاً</h4>
                    <FilterInputCheckBox labelFor="recent-added" label="أحدث المنتجات" inputName="recent-products" />
                    <FilterInputCheckBox labelFor="add-since-weak" label="مضاف منذ أسبوع" inputName="add-since-weak" />
                    <FilterInputCheckBox labelFor="add-since-month" label="مضاف منذ شهر" inputName="add-since-month" />
-                </div>
+                </div> */}
                 <hr/>
                 <div className='filter-by-range-price'>
                     <h4 className='filter-heading'>مدى السعر ( بالريال السعودي)</h4>

@@ -13,6 +13,7 @@ import img6 from '../images/img6.jpg';
 import Pageination from "./Pageination";
 import { useEffect, useState } from "react";
 
+import closeBtn from '../images/closeBtn.png'
 
 function OurProducts() {
   
@@ -23,14 +24,13 @@ function OurProducts() {
   // posts state
   let [posts , setPosts] = useState([]);
   let [pagesCount , setPagesCount] = useState(1);
-
-
-
+  let [model, setModel] = useState(false);
+  let [seacrh , setSearch] = useState('');
 
 
   let getPosts = async (currentPage) => {
     console.log(currentPage)
-    const res = await fetch(`https://api.escuelajs.co/api/v1/products?offset=${currentPage}&limit=${limit}`);
+    const res = await fetch(`https://fakestoreapi.com/products?page=${currentPage}&limit=${limit}`);
 
     
     const data = await res.json();
@@ -42,7 +42,7 @@ function OurProducts() {
    
     
     const fetechPosts = async (currentPage = 1) => {
-      const res = await fetch(`https://api.escuelajs.co/api/v1/products?offset=${currentPage}&limit=${limit}`);
+      const res = await fetch(`https://fakestoreapi.com/products?page=${currentPage}&limit=${limit}`);
 
       console.log(`initially posts when loaded -: page No.${currentPage}`)
      
@@ -70,6 +70,13 @@ function OurProducts() {
     const sortedPosts = [...posts].sort((a, b) => b.price - a.price);
     setPosts(sortedPosts);
   };
+
+
+  // set model true
+  function showModel() {
+    setModel(true)
+  }
+
   // handlePageClick 
   async function whenPageChange(page) {
     let currentPage = (page.selected + 1);
@@ -84,6 +91,22 @@ function OurProducts() {
 
   return (
     <div className="container">
+       <div className={model ? "model-show" : "model"}>
+                    <img src={closeBtn} alt="" className='close-model-btn' onClick={()=>{
+                        setModel(false)
+                        document.querySelector('.sidebar').style.display = 'none';
+                    }}/>
+                    <div className='model-content animate__animated animate__fadeInRight'>
+                       
+                       
+                       
+                      <Sidebar />
+
+
+
+                    </div>
+                   
+                </div>
     <div className="row">
       <div className="col-md-9 col-sm-1">
         <div className="search-bar px-4">
@@ -93,8 +116,13 @@ function OurProducts() {
               name="search"
               placeholder="بحث عن منتج"
               className="search-input"
+              onChange={(event)=>{
+                setSearch(event.target.value);
+                console.log(event.target.value);
+              }}
             />
-            <button type="submit">بحث</button>
+            {/* <button type="submit">بحث</button> */}
+           
             <div className="dropdown">
               <a
                 className="btn btn-sorting dropdown-toggle"
@@ -120,19 +148,25 @@ function OurProducts() {
                 </li>
               </ul>
             </div>
+            <button type="button" className="filter-btn-show-on-small-screen d-md-none" onClick={()=>{
+              showModel();
+              document.querySelector('.sidebar').style.display = 'block';
+            }}>فلترة</button>
           </form>
         </div>
-        <div className="row justify-content-center products-list">
-          {posts.map((post)=>{
+        <div className="row justify-content-center products-list animate__animated animate__fadeInRight">
+          {posts.filter((post)=>{
+            return seacrh.toLowerCase() === '' ? post : post.title.toLowerCase().includes(seacrh);
+          }).map((post)=>{
             return (
-                  <ItemBox key={post.id} itemImage={post.images[1]} itemTitle={post.title} priceAfterDiscount={post.price} priceBeforeDiscount={post.price}/>
+                  <ItemBox key={post.id} itemImage={post.image} itemTitle={post.title} priceAfterDiscount={post.price} priceBeforeDiscount={post.price}/>
          
             );
           })}
           
         </div>
         <div className="row pageination justify-content-center">
-          <Pageination pageCount={4} handlePageClick={whenPageChange}/>
+          <Pageination pageCount={5} handlePageClick={whenPageChange}/>
         </div>
        
       </div>

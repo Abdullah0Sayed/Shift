@@ -25,7 +25,7 @@ function ServiceDetails(props) {
 
             <div className="row">
                 <SectionHeading heading="تفاصيل عامة"/>
-                <ProductDetailsCard productName="ملمع زجاج" productCover={productCover} productCategory="قسم المنتج" productCode="#Sh14258" productPrice="200" />
+                <ProductDetailsCard productName="ملمع زجاج" productCover={productCover} productCode="#Sh14258" productPrice="200" />
             </div>
 
             <SectionHeading heading="تفاصيل الخدمة" headingDescription="كل ما تحتاج معرفته عن الخدمة" />

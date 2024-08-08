@@ -21,7 +21,7 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-         <span class="navbar-toggler-icon"><img src={menubar} alt=""/></span>
+         <span class=""><img src={menubar} alt="" className="navbar-toggler-icon"/></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">

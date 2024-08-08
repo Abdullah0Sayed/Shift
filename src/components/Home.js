@@ -109,7 +109,7 @@ function Home() {
             <QuickLinkBox  heading="أعمالنا" desc="شاهد جميع أعمال SHIFT" bg="white" image={workIcon} url="/our-works"/>
 
             <SectionHeading heading="أحدث منتجاتنا" />
-            <div className="row justify-content-between gap-2 animate__animated animate__fadeInRight">
+            <div className="row justify-content-center gap-2 animate__animated animate__fadeInRight">
 
             <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>
             <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>

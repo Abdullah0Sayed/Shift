@@ -84,3 +84,29 @@ a.dropdown-toggle::after {
     border-bottom: 0;
     border-left: .3em solid transparent;
 }
+
+.collapsed {
+    /* color: var(--mainColor--); */
+    font-weight: bold;
+  
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 .10rem var(--mainColor--);
+    /* transform: rotate(90deg); */
+    transition: box-shadow 0.4s ease;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: 0;
+    content: "";
+    margin-right: 0.25rem;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    border-radius: 0.2rem;
+}
