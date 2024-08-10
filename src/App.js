@@ -21,6 +21,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import Gallery from "./components/Gallery";
 import BookNow from "./components/BookNow";
 import ServiceDetails from "./components/ServiceDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
       <Navbar />
       <div className="App">
        
-        
+        <ScrollToTop/>
           <Routes>
             
             <Route path="/" element={<Home />}></Route>

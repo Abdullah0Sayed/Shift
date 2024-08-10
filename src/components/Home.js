@@ -1,5 +1,5 @@
 import car1 from "../images/car1.jpg";
-import car2 from "../images/car2.jpg";
+import car2 from "../images/img2.jpg";
 import car3 from "../images/car3.jpg";
 
 import power from "../images/power.webp";

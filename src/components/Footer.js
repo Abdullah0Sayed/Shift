@@ -13,7 +13,7 @@ import Box from '../components/Box';
 import location from '../images/location.gif';
 import workinghours from '../images/workinghours.gif';
 import time from '../images/time.gif';
-import email from '../images/email.gif';
+import emailIcon from '../images/email.gif';
 
 
 import facebook from '../images/facebook.png';
@@ -24,20 +24,72 @@ import instagram from '../images/instagram.png';
 
 import SocialLinks from './SocialLinks';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
+
+import axios from 'axios';
 
 function Footer() {
     let date = new Date();
     let currentYear = date.getFullYear();
+
+
+    let [addressText , setAddressText] = useState('');
+    let [workinfgHoursDisplay , setWorkingHours] = useState('');
+    let [email , setAEmail] = useState('');
+
+    // let [dayFrom , setDayFrom] = useState('');
+    // let [dayTo , setDayTo] = useState('');
+    // let [timeFrom , setTimeFrom] = useState('');
+    // let [timeTo , setTimeTo] = useState('');
+    // let [timePeriodFrom , setTimePeriodFrom] = useState('');
+    // let [timePeriodTo , setTimePeriodTo] = useState('');
+
+
+
+    useEffect(()=>{
+
+
+        const fetechCompanyData = async()=>{
+            const res = await axios.get('http://127.0.0.1:8000/api/company/53d9592b-5c60-4388-a69d-26b98db24165');
+            // const data = await res.json();
+            const company = await res.data.data.company;
+            const location = await res.data.data.location;
+            const workinghours = await res.data.data.workinghours;
+            console.log(workinghours)
+
+
+
+            setAEmail(company.company_main_mail_address);
+            setAddressText(location.location_address_text);
+
+            // setDayFrom(workinghours.day_from);
+            // setDayTo(workinghours.day_to);
+            // setTimeFrom(workinghours.time_from);
+            // setTimeTo(workinghours.time_to);
+            // setTimePeriodFrom(workinghours.time_period_from);
+            // setTimePeriodTo(workinghours.time_period_to);
+            
+            setWorkingHours(`${workinghours.day_from} - ${workinghours.day_to} | ${workinghours.time_from}${workinghours.time_period_from} : ${workinghours.time_to}${workinghours.time_period_to}`);
+            
+        }
+        
+        fetechCompanyData();
+       
+        
+        
+        
+        // setAEmail(res.data.data.company_main_mail_address);
+    },[])
     return (
         <div className=''>
            
                 <div class="card text-center footer">
 
                     <div class="card-body row justify-content-evenly">
-                        <Box icon={time} title="مواعيد العمل" description="من الخميس للجمعة : 6:00 ص - 6:00 م" />
-                        <Box icon={email} title="البريد الإلكتروني" description="info@dshift.sa" />
-                        <Box icon={location} title="مقر الشركة" description="طريق وادي وج , المثناه , 26511 الطائف , السعودية" />
+                        <Box icon={time} title="مواعيد العمل" description={workinfgHoursDisplay} />
+                        <Box icon={emailIcon} title="البريد الإلكتروني" description={email} />
+                        <Box icon={location} title="مقر الشركة" description={addressText} />
                     </div>
                     <div className='row following-payments justify-content-center gap-4'>
 

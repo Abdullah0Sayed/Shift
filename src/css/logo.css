@@ -1,6 +1,6 @@
 .logo {
-    width: 250px;
-    height: 50px;
+    width: 10em;
+    height: 2em;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {

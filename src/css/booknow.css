@@ -76,7 +76,8 @@ div.wrapper {
     display: none;
 }
 .wrapper-container input:checked + label {
-    width: 50rem;
+    width: 40rem;
+    border: 0.25em solid var(--mainColor--);
 
 }
 .wrapper-container input:checked + label .layout-description{
