@@ -5,6 +5,8 @@ import '../css/contactus.css';
 import callcenter from '../images/callcenter.png';
 import ContactSectionHead from "./ContactSectionHead";
 import { useEffect, useState } from "react";
+import Swal from 'sweetalert2'
+
 
 function Contactus() {
 
@@ -98,11 +100,17 @@ function Contactus() {
                         <label class="form-check-label text-dark" for="clientForShift">عميل سابق لدى SHIFT ؟</label>
                     </div>
                     <div className="col-12">
-                        <button className="button form-button col-12 p-3" onClick={(event)=>{
-                            console.log(query_message);
-                            
-                           
-                        }}>ارسال</button>
+                        <button className="button form-button col-12 p-3" onClick={()=>{
+                      Swal.fire({
+                        // title: "Good job!",
+                        text: "تم إرسال طلبكم بنجاح",
+                        icon: "success",
+                        showCloseButton: true,
+                        showConfirmButton: true,
+                        confirmButtonText: '<a href="/">حسناً</a>',
+                        confirmButtonColor: '#e3e3e3'
+                      });
+                    }}>ارسال</button>
                     </div>
 
                 </from>

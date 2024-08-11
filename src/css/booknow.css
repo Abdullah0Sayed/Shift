@@ -153,7 +153,13 @@ div.wrapper {
 }
 
 .third-party-payments .payments-ways img {
-    width: 5rem;
+    width: 80px;
+    height: 80px;
+}
+.third-party-payments .payments-ways img:hover {
+    transform: scale(1.1);
+    margin: 0 1rem;
+    transition: 0.4s ease;
 }
 
 .book-confirm-btn {

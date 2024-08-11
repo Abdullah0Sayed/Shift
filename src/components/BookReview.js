@@ -1,18 +1,18 @@
 
 import '../css/bookreview.css';
 function BookReview(props) {
+    let services = props.services ;
     return (
         <div className="col-1 book-review-componnet">
             <div className='review-heading'>
                 <p className="book-review-name p-0 m-0">{props.bookReviewTitle}</p>
-                <img src={props.bookReviewIcon} alt="" className='book-review-icon'/>
+                <img src={props.bookReviewIcon} alt="" className='book-review-icon' />
             </div>
-
-            {/* <div className='book-values'>
-               {props.array.map((element)=>{
-                return (<p className='book-value'>{element.value}</p>);
-               })}
-            </div> */}
+            {/* <p className='review-value'>{props.reviewValue}</p> */}
+            
+            <div className='review-value'>
+               {services ? services.map((element)=>{return (<p className='review-value'>{element}</p>)}) : <p className='review-value'>{props.reviewValue}</p>}
+            </div>
 
         </div>
     );

@@ -7,21 +7,22 @@
 }
 .book-review-componnet {
     width: 15rem;
-    height: 18rem;
+    /* height: 8rem; */
     background-color: var(--secondColor--);
     border-radius: 0.25rem;
     
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
-    padding: 0;
+    /* align-content: space-between; */
+    padding: 0.5rem;
     font-size: 18px;
 }
 .book-review-componnet .review-heading {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
     /* background-color: #ffffff; */
     display: flex;
     flex-direction: row;
@@ -36,3 +37,7 @@
 
 
 
+.review-value {
+    color: var(--mainColor--);
+    /* justify-self: center; */
+}

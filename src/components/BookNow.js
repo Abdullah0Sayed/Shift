@@ -20,6 +20,10 @@ import cash from '../images/cash.png';
 
 
 import confirmBtn from '../images/confirmIcon.png';
+import { useState } from "react";
+
+
+import Swal from 'sweetalert2'
 
 function BookNow() {
 
@@ -32,13 +36,61 @@ function BookNow() {
 
     ]
 
+    let [carSize , setCarSize] = useState('صغيرة');
+
 
     return (
 
         <div className="container">
 
             <div className="row">
-
+            <SectionHeading heading="حجم سيارتك" headingDescription="من فضلك قم بإختيار حجم سيارتك"></SectionHeading>
+                <div className="wrapper">
+                    <div className="wrapper-container">
+                        <input type="radio" name="slide" id="c1" checked onClick={(event)=>{
+                            console.log(event.target);
+                        }}/>
+                        <label for="c1" className="layout" onClick={(event)=>{
+                            setCarSize('صغيرة')
+                        }}>
+                            <div className="layout-row">
+                                <div className="layout-icon">سيارات صغيرة</div>
+                                <div className="layout-description">
+                                    {/* <h4 className="m-0">سيارات صغيرة</h4> */}
+                                    <p className="m-0">تشمل سيارات هاتشباك صغيرة، سيارات سيدان صغيرة، سيارات رياضية صغيرة ذات ذات البابين</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c2" onChange={(event)=>{
+                            console.log(event);
+                        }}/>
+                        <label for="c2" className="layout" onClick={(event)=>{
+                            setCarSize('متوسطة')
+                        }}>
+                            <div className="layout-row">
+                                <div className="layout-icon">سيارات متوسطة</div>
+                                <div className="layout-description">
+                                    {/* <h4 className="m-0">سيارات متوسطة</h4> */}
+                                    <p className="m-0">تشمل سيارات السيدان كبيرة الحجم، سيارات الكروس-اوفر – سيارات رياضية ذات اربع ابواب سيارات بيك أب ذات الباب الواحد</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c3"  onChange={(event)=>{
+                            console.log(event);
+                        }}/>
+                        <label for="c3" className="layout" onClick={(event)=>{
+                            setCarSize('كبيرة')
+                        }}>
+                            <div className="layout-row">
+                                <div className="layout-icon">سيارات كبيرة</div>
+                                <div className="layout-description">
+                                    {/* <h4 className="m-0">سيارات كبيرة</h4> */}
+                                    <p className="m-0">تشمل السيارات الرياضية متعددة الاستخدامات (SUV) كبيرة الحجم و سيارات صالون بأربعة أبواب، سيارات بيك أب ذات الأربع ابواب</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
                 <SectionHeading heading="الباقات والخدمات" headingDescription="من فضلك قم باختيار الباقة أو الخدمة المطلوبة"></SectionHeading>
                 <div className="row justify-content-center gap-2">
                     <BookService serviceName="خدمة التلميع"></BookService>
@@ -47,7 +99,7 @@ function BookNow() {
                     <BookService serviceName="خدمة التلميع"></BookService>
                     <BookService serviceName="خدمة التلميع"></BookService>
                 </div>
-
+               
                 <div className="row justify-content-center gap-2">
 
                     {products.map((product, index) => {
@@ -59,40 +111,10 @@ function BookNow() {
 
 
                 </div>
-                <SectionHeading heading="حجم سيارتك" headingDescription="من فضلك قم بإختيار حجم سيارتك"></SectionHeading>
-                <div className="wrapper">
-                    <div className="wrapper-container">
-                        <input type="radio" name="slide" id="c1" checked />
-                        <label for="c1" className="layout">
-                            <div className="layout-row">
-                                <div className="layout-icon">سيارات صغيرة</div>
-                                <div className="layout-description">
-                                    {/* <h4 className="m-0">سيارات صغيرة</h4> */}
-                                    <p className="m-0">تشمل سيارات هاتشباك صغيرة، سيارات سيدان صغيرة، سيارات رياضية صغيرة ذات ذات البابين</p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide" id="c2" checked />
-                        <label for="c2" className="layout">
-                            <div className="layout-row">
-                                <div className="layout-icon">سيارات متوسطة</div>
-                                <div className="layout-description">
-                                    {/* <h4 className="m-0">سيارات متوسطة</h4> */}
-                                    <p className="m-0">تشمل سيارات السيدان كبيرة الحجم، سيارات الكروس-اوفر – سيارات رياضية ذات اربع ابواب سيارات بيك أب ذات الباب الواحد</p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide" id="c3" checked />
-                        <label for="c3" className="layout">
-                            <div className="layout-row">
-                                <div className="layout-icon">سيارات كبيرة</div>
-                                <div className="layout-description">
-                                    {/* <h4 className="m-0">سيارات كبيرة</h4> */}
-                                    <p className="m-0">تشمل السيارات الرياضية متعددة الاستخدامات (SUV) كبيرة الحجم و سيارات صالون بأربعة أبواب، سيارات بيك أب ذات الأربع ابواب</p>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
+                <SectionHeading heading="خدمات اضافية" headingDescription="يمكنك اختيار خدمات اضافية مع طلب الحجز"></SectionHeading>
+                <div className="row justify-content-center gap-2">
+
+
                 </div>
                 <SectionHeading heading="بيانات الحجز" headingDescription="من فضلك قم بملئ البيانات المطلوبة"></SectionHeading>
                 <form action="" method="post" >
@@ -114,11 +136,11 @@ function BookNow() {
                 </form>
                 <SectionHeading heading="ملخص الحجز" headingDescription="من فضلك قم بمراجعة الخدمات المحجوزة"></SectionHeading>
                 <div className="row book-review justify-content-center gap-2">
-                    <BookReview bookReviewTitle="حجم سيارتك" bookReviewIcon={icon}></BookReview>
-                    <BookReview bookReviewTitle="الخدمات المحجوزة" bookReviewIcon={icon}></BookReview>
-                    <BookReview bookReviewTitle="الخدمات الإضافية" bookReviewIcon={icon}></BookReview>
-                    <BookReview bookReviewTitle="مدة تنفيذ طلبك" bookReviewIcon={icon}></BookReview>
-                    <BookReview bookReviewTitle="التكلفة الإجمالية" bookReviewIcon={icon}></BookReview>
+                    <BookReview bookReviewTitle="حجم سيارتك" bookReviewIcon={icon} reviewValue={carSize}></BookReview>
+                    <BookReview bookReviewTitle="الخدمات المحجوزة" bookReviewIcon={icon} ></BookReview>
+                    <BookReview bookReviewTitle="الخدمات الإضافية" bookReviewIcon={icon} ></BookReview>
+                    <BookReview bookReviewTitle="مدة تنفيذ طلبك" bookReviewIcon={icon} ></BookReview>
+                    <BookReview bookReviewTitle="التكلفة الإجمالية" bookReviewIcon={icon} ></BookReview>
                 </div>
                 <SectionHeading heading="معلومات الدفع" headingDescription="إليك جميع وسائل الدفع المتاحة لدينا"></SectionHeading>
                 <div className="row payments-avaliable-ways">
@@ -135,7 +157,17 @@ function BookNow() {
                 </div>
                 <SectionHeading heading="تاكيد الحجز"></SectionHeading>
                 <div className="row book-confirmation">
-                    <button type="button" className="book-confirm-btn">
+                    <button type="button" className="book-confirm-btn" onClick={()=>{
+                      Swal.fire({
+                        // title: "Good job!",
+                        text: "تم تأكيد عملية الحجز بنجاح",
+                        icon: "success",
+                        showCloseButton: true,
+                        showConfirmButton: true,
+                        confirmButtonText: '<a href="/">حسناً</a>',
+                        confirmButtonColor: '#e3e3e3'
+                      });
+                    }}>
                         <span>تأكيد عملية الحجز</span>
                         <img src={confirmBtn} alt="" className="confirm-btn-icon" />
                     </button>

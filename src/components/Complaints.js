@@ -4,6 +4,8 @@ import "../css/contactus.css";
 
 import complaints from "../images/complaints.gif";
 import ContactSectionHead from "./ContactSectionHead";
+import Swal from 'sweetalert2'
+
 
 function Complaints() {
     return (
@@ -96,7 +98,17 @@ function Complaints() {
                         </label>
                     </div>
                     <div className="col-12">
-                        <button type="submit" className="button form-button col-12 p-3">
+                        <button type="submit" className="button form-button col-12 p-3" onClick={()=>{
+                      Swal.fire({
+                        // title: "Good job!",
+                        text: "تم إرسال طلبكم بنجاح",
+                        icon: "success",
+                        showCloseButton: true,
+                        showConfirmButton: true,
+                        confirmButtonText: '<a href="/">حسناً</a>',
+                        confirmButtonColor: '#e3e3e3'
+                      });
+                    }}>
                             ارسال
                         </button>
                     </div>
