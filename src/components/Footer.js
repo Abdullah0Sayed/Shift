@@ -34,9 +34,9 @@ function Footer() {
     let currentYear = date.getFullYear();
 
 
-    let [addressText , setAddressText] = useState('');
-    let [workinfgHoursDisplay , setWorkingHours] = useState('');
-    let [email , setAEmail] = useState('');
+    let [addressText , setAddressText] = useState('طريق وادي وج , المثناه , 26511 الطائف , السعودية');
+    let [workinfgHoursDisplay , setWorkingHours] = useState('من الخميس للأثنين - من 10 صباحاً وحتى 4 مساءً');
+    let [email , setAEmail] = useState('shift@info.com');
 
     // let [dayFrom , setDayFrom] = useState('');
     // let [dayTo , setDayTo] = useState('');

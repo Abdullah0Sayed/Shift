@@ -61,7 +61,7 @@ function BookNow() {
                                 </div>
                             </div>
                         </label>
-                        <input type="radio" name="slide" id="c2" onChange={(event)=>{
+                        <input type="radio" name="slide" id="c2" checked onChange={(event)=>{
                             console.log(event);
                         }}/>
                         <label for="c2" className="layout" onClick={(event)=>{
@@ -75,7 +75,7 @@ function BookNow() {
                                 </div>
                             </div>
                         </label>
-                        <input type="radio" name="slide" id="c3"  onChange={(event)=>{
+                        <input type="radio" name="slide" id="c3" checked onChange={(event)=>{
                             console.log(event);
                         }}/>
                         <label for="c3" className="layout" onClick={(event)=>{
