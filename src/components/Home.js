@@ -1,5 +1,5 @@
 import car1 from "../images/car1.jpg";
-import car2 from "../images/img2.jpg";
+import car2 from "../images/car2.jpg";
 import car3 from "../images/car3.jpg";
 
 import power from "../images/power.webp";
@@ -61,21 +61,21 @@ function Home() {
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src={car1} class="d-block w-100" alt="..." />
+                <img src={car1} class="d-block slider-image" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
                   <h2 className="slide-heading">خدمة تلميع السيارات</h2>
                   <p>استمتع بغسييل سيارتك مع SHIFT وخصم حتى 20%</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src={car2} class="d-block w-100" alt="..." />
+                <img src={car2} class="d-block slider-image" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
                   <h2 className="slide-heading">خدمة تلميع السيارات</h2>
                   <p>استمتع بغسييل سيارتك مع SHIFT وخصم حتى 20%</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src={car3} class="d-block w-100" alt="..." />
+                <img src={car3} class="d-block slider-image" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
                   <h2 className="slide-heading">خدمة تلميع السيارات</h2>
                   <p>استمتع بغسييل سيارتك مع SHIFT وخصم حتى 20%</p>

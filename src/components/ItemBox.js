@@ -20,7 +20,7 @@ function ItemBox(props) {
                 </div>
                 <div className='item-btn'>
 
-                    <Link to={'/product-details'}><button type="button" className='item-btn-details'>تفاصيل المنتج</button></Link>
+                    <Link to={`/product-details/${props.uuid}`}><button type="button" className='item-btn-details'>تفاصيل المنتج</button></Link>
                 </div>
             </div>
         </>

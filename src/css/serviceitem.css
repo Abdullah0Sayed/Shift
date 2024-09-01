@@ -1,0 +1,107 @@
+:root {
+    --mainColor--: #9933FF;
+    --secondColor--: #19191b;
+    --thirdColor--: #000000;
+    --textColor--: #ffffff;
+    --hoverLink--: #916bb8;
+}
+
+
+.service {
+    min-width: 19rem;
+    /* height: 400px; */
+    background-color: var(--textColor--);
+    /* border: 2px solid var(--mainColor--); */
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+
+.service .item-image {
+    width: 100%;
+    height: 220px;
+    /* background-color: var(--textColor--); */
+      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+}
+.item-title-pricing {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.service .product-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+    /* height: 200px; */
+}
+.service .item-btn-details {
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: var(--mainColor--);
+    color: var(--textColor--);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 0.25rem;
+}
+.service:hover {
+    background-color: var(--textColor--);
+    /* border: 2px solid var(--mainColor--); */
+    /* transition: 0.2s ; */
+
+}
+.item-title {
+    font-size: 14px;
+    /* height: 40px; */
+    margin: 0;
+    text-wrap: wrap;
+    font-weight: bold;
+    color: var(--secondColor--);
+}
+.item-title p {
+    margin: 0;
+}
+.item-price  {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.item-price p {
+    font-size: 14px;
+    margin: 0;
+}
+.price-after-discount {
+    font-weight: bold;
+    color: var(--mainColor--);
+}
+.price-before-discount {
+    color: var(--hoverLink--);
+    text-decoration: line-through;
+}
+
+.item-btn {
+    width: 100%;
+}
+.addCartIcon , .deleteCartIcon{
+    width: 12px;
+}
+
+.addCartBtn:hover {
+    transform: scale(0.9);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

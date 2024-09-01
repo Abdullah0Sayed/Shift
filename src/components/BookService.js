@@ -1,12 +1,17 @@
 import '../css/bookservice.css';
+import React from 'react';
 
-function  BookService(props) {
-    return (
-            <div className="col-1 book-service-componnet">
-                
-                <p className="book-service-name p-0 m-0">{props.serviceName}</p>
-            </div>
-    );
+function BookService(props) {
+  const { serviceName, isActive, onClick } = props;
+
+  return (
+    <div
+      className={`col-3 book-service-componnet ${isActive ? 'active' : ''}`}
+      onClick={() => onClick(serviceName)}
+    >
+      {serviceName}
+    </div>
+  );
 }
 
 export default BookService;

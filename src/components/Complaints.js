@@ -4,10 +4,50 @@ import "../css/contactus.css";
 
 import complaints from "../images/complaints.gif";
 import ContactSectionHead from "./ContactSectionHead";
-import Swal from 'sweetalert2'
-
+import { useEffect, useState } from "react";
+import Swal from 'sweetalert2';
+import axios from "axios";
 
 function Complaints() {
+    const [client_full_name, setClientFullName] = useState('');
+    const [client_mobile_phone, setClientMobilePhone] = useState('');
+    const [order_type, setOrderType] = useState('');
+    const [order_for_service, setOrderService] = useState('');
+    const [message, setMessage] = useState('');
+    const [old_customer, setOldCustomer] = useState(0);
+    const [invoice_file, setInvoiceFile] = useState(null);
+    const [warranty_file, setWarrantyFile] = useState(null);
+    const [damages_file, setDamagesFile] = useState(null);
+
+    useEffect(() => {
+        setOldCustomer(0);
+    }, []);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        
+        try {
+            const complaintForm = new FormData();
+            complaintForm.append('client_full_name' , client_full_name)
+            complaintForm.append('client_mobile_phone' , client_mobile_phone)
+            complaintForm.append('order_type' , order_type)
+            complaintForm.append('order_for_service' , order_for_service)
+            complaintForm.append('message' , message)
+            complaintForm.append('old_customer' , old_customer)
+            complaintForm.append('invoice_file' , invoice_file)
+            complaintForm.append('warranty_file' , warranty_file)
+            complaintForm.append('damages_file' , damages_file)
+            const { data } = await axios.post('http://127.0.0.1:8000/api/compalints-suggests',complaintForm, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            console.log(data)
+            
+        } catch (error) {
+            console.error(error);
+        }
+    };
     return (
         <>
             <ContactSectionHead
@@ -15,60 +55,43 @@ function Complaints() {
                 heading="فريق خدمة عملاء لإستقبال شكاوتكم ومقترحاتكم"
                 body="نسعى دائماً في SHIFT لتقديم خدمات تلبى احتياجات عملائها ، لذلك قمنا بتعيين فريق خدمة عملاء مميز لخدمتكم على مدار اليوم"
             />
-            <SectionHeading heading="نسعى لخدمة أفضل"></SectionHeading>
+            <SectionHeading heading="نسعى لخدمة أفضل" />
             <div className="container">
-                <from className="row g-2" action="/" method="get">
-
+                <form className="row g-2" >
                     <div className="col-6">
                         <Input
-                            label="الأسم الأول"
-                            placeholder="أدخل اسمك الأول"
+                            label="الأسم بالكامل"
+                            placeholder="أدخل اسمك بالكامل"
                             type="text"
-                            id="firstname"
-                            inputFor="lastname"
-                        ></Input>
-                    </div>
-                    <div className="col-6">
-                        <Input
-                            label="الأسم الأخير"
-                            placeholder="أدخل اسمك الأخير"
-                            type="text"
-                            id="lastname"
-                            inputFor="lastname"
-                        ></Input>
-                    </div>
-                    <div className="col-6">
-                        <Input
-                            label="البريد الإلكتروني"
-                            placeholder="أدخل البريد الإلكتروني"
-                            type="email"
-                            id="email"
-                            inputFor="email"
-                        ></Input>
+                            id="client_full_name"
+                            inputFor="client_full_name"
+                            onChange={setClientFullName}
+                        />
                     </div>
                     <div className="col-6">
                         <Input
                             label="رقم الجوال"
                             placeholder="أدخل رقم الجوال"
                             type="text"
-                            id="mobile"
-                            inputFor="mobile"
-                        ></Input>
+                            id="client_mobile_phone"
+                            inputFor="client_mobile_phone"
+                            onChange={setClientMobilePhone}
+                        />
                     </div>
                     <div className="col-12">
-                        <select class="form-select p-3 mb-3 complaints" aria-label="Default select example ">
-                            <option selected className="selectLabel" disabled>أختر نوع الطلب</option>
+                        <select className="form-select p-3 mb-3 complaints" name="order_type" aria-label="Default select example" onChange={(e) => setOrderType(e.target.value)}>
+                            <option value="" disabled selected className="selectLabel">أختر نوع الطلب</option>
                             <option value="شكوى">شكوى</option>
                             <option value="مقترح">مقترح</option>
                         </select>
                     </div>
                     <div className="col-12">
-                        <select class="form-select p-3 mb-3 complaints" aria-label="Default select example ">
-                            <option selected className="selectLabel" disabled>مقترح فـ / شكوى عن</option>
-                            <option value="شكوى">خدمة</option>
-                            <option value="مقترح">خدمة</option>
-                            <option value="مقترح">خدمة</option>
-                            <option value="مقترح">خدمة</option>
+                        <select className="form-select p-3 mb-3 complaints" name="order_for_service" aria-label="Default select example" onChange={(e) => setOrderService(e.target.value)}>
+                            <option value="" disabled selected className="selectLabel">مقترح فـ / شكوى عن</option>
+                            <option value="التلميع">التلميع</option>
+                            <option value="العازل الحراري">العازل الحراري</option>
+                            <option value="أفلام الحماية">أفلام الحماية</option>
+                            <option value="النانو سيراميك">النانو سيراميك</option>
                         </select>
                     </div>
                     <div className="col-12 form-floating">
@@ -76,45 +99,41 @@ function Complaints() {
                             className="form-control"
                             placeholder="Leave a comment here"
                             id="floatingTextarea2"
+                            onChange={(e) => setMessage(e.target.value)}
+                            name="message"
                         ></textarea>
-                        <label for="floatingTextarea2" className="px-4">محتوى الشكوى / المقترح</label>
+                        <label htmlFor="floatingTextarea2" className="px-4">محتوى الشكوى / المقترح</label>
                     </div>
                     <div>
-                        <label for="formFileLg" class="form-label">صورة الفاتورة (إختياري)</label>
-                        <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                        <label htmlFor="invoice_file" className="form-label">صورة الفاتورة (إختياري)</label>
+                        <input className="form-control form-control-lg" name="invoice_file" id="invoice_file" type="file" onChange={(e) => setInvoiceFile(e.target.files[0])} />
                     </div>
                     <div>
-                        <label for="formFileLg" class="form-label">صورة الضمان (إختياري)</label>
-                        <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                        <label htmlFor="warranty_file" className="form-label">صورة الضمان (إختياري)</label>
+                        <input className="form-control form-control-lg" name="warranty_file" id="warranty_file" type="file" onChange={(e) => setWarrantyFile(e.target.files[0])} />
                     </div>
                     <div>
-                        <label for="formFileLg" class="form-label">صورة التلفيات (إختياري)</label>
-                        <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                        <label htmlFor="damages_file" className="form-label">صورة التلفيات (إختياري)</label>
+                        <input className="form-control form-control-lg" name="damages_file" id="damages_file" type="file" onChange={(e) => setDamagesFile(e.target.files[0])} />
                     </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="clientForShift" />
-                        <label class="form-check-label text-dark" for="clientForShift">
-                            عميل سابق لدى SHIFT ؟
-                        </label>
+                    <div className="form-check form-switch">
+                        <input className="form-check-input" type="checkbox" id="clientForShift" name="old_customer" onChange={(event) => {
+                            if (old_customer == 1) {
+                                setOldCustomer(0)
+                            }
+                            else {
+                                setOldCustomer(1)
+                            }
+
+
+                        }} />
+                        <label className="form-check-label text-dark" htmlFor="clientForShift">عميل سابق لدى SHIFT ؟</label>
                     </div>
                     <div className="col-12">
-                        <button type="submit" className="button form-button col-12 p-3" onClick={()=>{
-                      Swal.fire({
-                        // title: "Good job!",
-                        text: "تم إرسال طلبكم بنجاح",
-                        icon: "success",
-                        showCloseButton: true,
-                        showConfirmButton: true,
-                        confirmButtonText: '<a href="/">حسناً</a>',
-                        confirmButtonColor: '#e3e3e3'
-                      });
-                    }}>
-                            ارسال
-                        </button>
+                        <button className="button form-button col-12 p-3" onClick={handleSubmit}>ارسال</button>
                     </div>
-                </from>
+                </form>
             </div>
-
         </>
     );
 }

@@ -47,40 +47,40 @@ function Footer() {
 
 
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
 
-        const fetechCompanyData = async()=>{
-            const res = await axios.get('http://127.0.0.1:8000/api/company/53d9592b-5c60-4388-a69d-26b98db24165');
-            // const data = await res.json();
-            const company = await res.data.data.company;
-            const location = await res.data.data.location;
-            const workinghours = await res.data.data.workinghours;
-            console.log(workinghours)
+    //     const fetechCompanyData = async()=>{
+    //         const res = await axios.get('http://127.0.0.1:8000/api/company/53d9592b-5c60-4388-a69d-26b98db24165');
+    //         // const data = await res.json();
+    //         const company = await res.data.data.company;
+    //         const location = await res.data.data.location;
+    //         const workinghours = await res.data.data.workinghours;
+    //         console.log(workinghours)
 
 
 
-            setAEmail(company.company_main_mail_address);
-            setAddressText(location.location_address_text);
+    //         setAEmail(company.company_main_mail_address);
+    //         setAddressText(location.location_address_text);
 
-            // setDayFrom(workinghours.day_from);
-            // setDayTo(workinghours.day_to);
-            // setTimeFrom(workinghours.time_from);
-            // setTimeTo(workinghours.time_to);
-            // setTimePeriodFrom(workinghours.time_period_from);
-            // setTimePeriodTo(workinghours.time_period_to);
+    //         // setDayFrom(workinghours.day_from);
+    //         // setDayTo(workinghours.day_to);
+    //         // setTimeFrom(workinghours.time_from);
+    //         // setTimeTo(workinghours.time_to);
+    //         // setTimePeriodFrom(workinghours.time_period_from);
+    //         // setTimePeriodTo(workinghours.time_period_to);
             
-            setWorkingHours(`${workinghours.day_from} - ${workinghours.day_to} | ${workinghours.time_from}${workinghours.time_period_from} : ${workinghours.time_to}${workinghours.time_period_to}`);
+    //         setWorkingHours(`${workinghours.day_from} - ${workinghours.day_to} | ${workinghours.time_from}${workinghours.time_period_from} : ${workinghours.time_to}${workinghours.time_period_to}`);
             
-        }
+    //     }
         
-        fetechCompanyData();
+    //     fetechCompanyData();
        
         
         
         
-        // setAEmail(res.data.data.company_main_mail_address);
-    },[])
+    //     // setAEmail(res.data.data.company_main_mail_address);
+    // },[])
     return (
         <div className=''>
            

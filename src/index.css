@@ -6,15 +6,16 @@
   --textColor--: #ffffff;
   --hoverLink--: #916bb8;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
 body {
   margin: 0;
   direction: rtl;
-  font-family: "Tajawal", sans-serif;
+  font-family: "Noto Sans Arabic", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: var(--textColor--); */
   background-color: #eee;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -23,11 +24,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--hoverLink--);
+  background-color: var(--mainColor--);
 
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--textColor--);
-  border-radius: 2rem;
+  border-radius: 8rem;
   
 }
