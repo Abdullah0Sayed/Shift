@@ -78,6 +78,8 @@ function Contactus() {
                 text: 'تم ارسال طلبكم بنجاح. وسنقوم بالتواصل معكم قريباً.',
                 icon: 'success',
                 confirmButtonText: 'موافق'
+            }).then(() => {
+                window.location.href = '/'; // إعادة تحميل الصفحة
             });
         } catch (error) {
             console.error(error);
@@ -86,6 +88,8 @@ function Contactus() {
                 text: 'عذراً، حدث خطأ أثناء ارسال طلبكم. يرجى المحاولة مرة أخرى.',
                 icon: 'error',
                 confirmButtonText: 'موافق'
+            }).then(() => {
+                window.location.href = '/'; // إعادة تحميل الصفحة
             });
         }
     };

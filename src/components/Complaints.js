@@ -94,6 +94,8 @@ function Complaints() {
                 text: 'تم ارسال طلبكم بنجاح. وسنقوم بالتواصل معكم قريباً.',
                 icon: 'success',
                 confirmButtonText: '<a href="/">موافق<a/>'
+            }).then(() => {
+                window.location.href = '/'; // إعادة تحميل الصفحة
             });
             
         } catch (error) {
@@ -103,6 +105,8 @@ function Complaints() {
                 text: 'عذراً، حدث خطأ أثناء ارسال طلبكم. يرجى المحاولة مرة أخرى.',
                 icon: 'error',
                 confirmButtonText: 'موافق'
+            }).then(() => {
+                window.location.href = '/'; // إعادة تحميل الصفحة
             });
         }
     };

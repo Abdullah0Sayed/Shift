@@ -18,7 +18,7 @@ function Input(props) {
                     onChange={(e) => {
                         onChange(e.target.value);
                     }}
-                 />
+                    required />
                 <label for={props.inputFor}>{props.label}</label>
             </div>
         </>

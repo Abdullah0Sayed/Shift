@@ -38,7 +38,7 @@ import { Link } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
-import { addServiceToCart, removeFromCart } from "../rtk/slicer/bookingCartSlicer";
+import { addServiceToCart, clearCart, removeFromCart } from "../rtk/slicer/bookingCartSlicer";
 
 
 
@@ -102,7 +102,7 @@ function BookNow() {
         car_size: null,
         services: []
     };
-    const handleClick = async (bookingObject , cart) => {
+    const handleClick = async (bookingObject, cart) => {
         // التحقق من صحة الحقول
         if (!bookingObject.client_name) {
             Swal.fire({
@@ -113,7 +113,7 @@ function BookNow() {
             });
             return;
         }
-    
+
         if (!bookingObject.client_phone || bookingObject.client_phone.length !== 9) {
             Swal.fire({
                 title: 'خطأ',
@@ -123,7 +123,7 @@ function BookNow() {
             });
             return;
         }
-    
+
         if (!bookingObject.car_brand) {
             Swal.fire({
                 title: 'خطأ',
@@ -133,7 +133,7 @@ function BookNow() {
             });
             return;
         }
-    
+
         if (!bookingObject.car_model) {
             Swal.fire({
                 title: 'خطأ',
@@ -143,27 +143,27 @@ function BookNow() {
             });
             return;
         }
-    
+
         // التحقق من أن حجم السيارة قد تم اختياره
-    if (!bookingObject.car_size) {
-        Swal.fire({
-            title: 'خطأ',
-            text: 'يرجى اختيار حجم السيارة.',
-            icon: 'warning',
-            confirmButtonText: 'موافق'
-        });
-        return;
-    }
-   
-    if(cart.length < 1) {
-        Swal.fire({
-            title: 'خطأ',
-            text: 'يرجى اختيار اختيار خدمة واحدة على الأقل لتاكيد عملية الحجز.',
-            icon: 'warning',
-            confirmButtonText: 'موافق'
-        });
-        return;
-    }
+        if (!bookingObject.car_size) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى اختيار حجم السيارة.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+
+        if (cart.length < 1) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى اختيار اختيار خدمة واحدة على الأقل لتاكيد عملية الحجز.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
         // إرسال الطلب بعد التحقق من صحة المدخلات
         try {
             const { data } = await axios.post('http://127.0.0.1:8000/api/booking-order', bookingObject, {
@@ -177,6 +177,8 @@ function BookNow() {
                 text: 'تم تأكيد الحجز بنجاح. سنقوم بالتواصل معكم قريباً.',
                 icon: 'success',
                 confirmButtonText: 'موافق'
+            }).then(() => {
+                window.location.href = '/'; // إعادة تحميل الصفحة
             });
         } catch (error) {
             console.error(error);
@@ -185,10 +187,12 @@ function BookNow() {
                 text: 'عذراً، حدث خطأ أثناء تأكيد الحجز. يرجى المحاولة مرة أخرى.',
                 icon: 'error',
                 confirmButtonText: 'موافق'
-            });
+            }).then(() => {
+                window.location.href = '/'; // إعادة تحميل الصفحة
+            });;
         }
     };
-    
+
     useEffect(() => {
         async function fetchServices() {
             try {
@@ -282,6 +286,7 @@ function BookNow() {
                             onClick={(event) => {
                                 setCarSize("صغيرة");
                                 setCarSizeQuery(1);
+                                dispatch(clearCart())
                             }}
                         />
                         <label
@@ -290,6 +295,7 @@ function BookNow() {
                             onClick={(event) => {
                                 setCarSize("صغيرة");
                                 setCarSizeQuery(1);
+                                dispatch(clearCart())
                             }}
                         >
                             <div className="layout-row">
@@ -311,6 +317,7 @@ function BookNow() {
                                 setCarSize("متوسطة");
                                 setCarSizeQuery(2);
                                 console.log(event);
+                                dispatch(clearCart())
                             }}
                         />
                         <label
@@ -319,6 +326,7 @@ function BookNow() {
                             onClick={(event) => {
                                 setCarSize("متوسطة");
                                 setCarSizeQuery(2);
+                                dispatch(clearCart())
                             }}
                         >
                             <div className="layout-row">
@@ -339,6 +347,7 @@ function BookNow() {
                             onChange={(event) => {
                                 setCarSize("كبيرة");
                                 setCarSizeQuery(3);
+                                dispatch(clearCart())
                             }}
                         />
                         <label
@@ -347,6 +356,7 @@ function BookNow() {
                             onClick={(event) => {
                                 setCarSize("كبيرة");
                                 setCarSizeQuery(3);
+                                dispatch(clearCart())
                             }}
                         >
                             <div className="layout-row">
@@ -395,7 +405,7 @@ function BookNow() {
                         return (
 
 
-                            <div className="service col-2" key={serivce.uuid}>
+                            <div className="service col-lg-3 col-sm-12" key={serivce.uuid}>
                                 <div className='item-image'>
                                     <img src={serivce.service_image} alt="image" className='product-image' />
                                 </div>
@@ -405,6 +415,9 @@ function BookNow() {
                                     </div>
                                     <div className='item-price'>
                                         <p className='price-after-discount'>{serivce.service_price + '  ر.س'}</p>
+
+
+
                                         <p className='price-before-discount'>{serivce.service_price_before_discount + '  ر.س'}</p>
                                     </div>
                                 </div>
@@ -413,13 +426,13 @@ function BookNow() {
                                     <Link to={`/product-details/${serivce.uuid}`} className='col-7'><button type="button" className='item-btn-details py-1 px-2'>تفاصيل</button></Link>
                                     <button id="addToCart" type="button" className='addCartBtn col-5 btn btn-dark p-0 px-1' onClick={(e) => {
                                         dispatch(addServiceToCart(serivce))
-                                        e.target.classList.add('d-none')
-                                        e.target.nextElementSibling.classList.remove('d-none');
+                                        // e.target.classList.add('d-none')
+                                        // e.target.nextElementSibling.classList.remove('d-none');
                                     }}><img src={addCart} alt="" className='addCartIcon' /> حجز</button>
                                     <button id="deleteFromCart" type="button" className='deleteCartBtn col-5 btn btn-danger p-0 px-1 d-none' onClick={(e) => {
                                         dispatch(removeFromCart(serivce))
-                                        e.target.classList.add('d-none');
-                                        e.target.previousElementSibling.classList.remove('d-none');
+                                        // e.target.classList.add('d-none');
+                                        // e.target.previousElementSibling.classList.remove('d-none');
 
                                     }}><img src={removeCart} alt="" className='deleteCartIcon' /> ازالة</button>
                                 </div>
@@ -493,7 +506,43 @@ function BookNow() {
                         reviewValue={totalPrice + ' ر.س'}
                     ></BookReview>
                 </div>
+                <SectionHeading heading="عربة الشراء"></SectionHeading>
+                <div className="row cart table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">اسم الخدمة</th>
+                                <th scope="col">سعر الخدمة</th>
+                                <th scope="col">مدة تنفيذ (بالساعات)</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
 
+                                cart.map((service, index) => {
+                                    return (
+                                        <tr key={service.uuid}>
+                                            <th scope="row">{++index}</th>
+                                            <td>{service.main_service.service_name}</td>
+                                            <td>{service.service_price + ' ر.س'}</td>
+                                            <td>{service.service_execution_time}</td>
+                                            <td>
+                                                <button type="button" className="btn btn-outline-danger" onClick={(e) => {
+                                                    dispatch(removeFromCart(service))
+                                                }}>ازالة</button>
+                                            </td>
+
+                                        </tr>
+                                    );
+
+                                    // console.log(service)
+                                })
+                            }
+                        </tbody>
+                    </table>
+                </div>
                 <SectionHeading heading="تاكيد الحجز"></SectionHeading>
                 <div className="row book-confirmation">
                     <button
@@ -514,7 +563,7 @@ function BookNow() {
                                     price: element.service_price
                                 });
                             });
-                            handleClick(bookingObject , cart);
+                            handleClick(bookingObject, cart);
                         }}
                     >
                         <span>تأكيد عملية الحجز</span>
