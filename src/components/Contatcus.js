@@ -18,26 +18,75 @@ function Contactus() {
     let [quey_subject, setQuerySubject] = useState('');
     let [query_about, setQueryMessage] = useState('');
     let [old_customer, setOldCustomer] = useState(false);
+    let inqueryObject = {
+        client_full_name,
+        client_mobile_phone,
+        quey_subject,
+        query_about,
+        old_customer
+    }
     useEffect(() => {
         setOldCustomer(false)
     }, []);
 
-    const handleClick = async () => {
+    const handleClick = async (inqueryObject) => {
+        if (!inqueryObject.client_full_name) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال الاسم الكامل.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+        if (!inqueryObject.client_mobile_phone || inqueryObject.client_mobile_phone.length !== 9) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال رقم الهاتف المكون من 9 أرقام.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+        if (!inqueryObject.quey_subject) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال عنوان لطلبكم.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+        if (!inqueryObject.query_about) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال رسالة الاستفسار.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
         try {
-            const { data } = await axios.post('http://127.0.0.1:8000/api/inqueries', {
-                client_full_name,
-                client_mobile_phone,
-                quey_subject,
-                query_about,
-                old_customer
-            }, {
+            const { data } = await axios.post('http://127.0.0.1:8000/api/inqueries', inqueryObject, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
             console.log(data);
+            Swal.fire({
+                title: 'تم ارسال استفساركم بنجاح',
+                text: 'تم ارسال طلبكم بنجاح. وسنقوم بالتواصل معكم قريباً.',
+                icon: 'success',
+                confirmButtonText: 'موافق'
+            });
         } catch (error) {
             console.error(error);
+            Swal.fire({
+                title: 'حدث خطأ',
+                text: 'عذراً، حدث خطأ أثناء ارسال طلبكم. يرجى المحاولة مرة أخرى.',
+                icon: 'error',
+                confirmButtonText: 'موافق'
+            });
         }
     };
 
@@ -114,16 +163,8 @@ function Contactus() {
                     <button 
     className="button form-button col-12 p-3" 
     onClick={function(){
-        handleClick();
-        Swal.fire({
-            // title: "Good job!",
-            text: "تم إرسال طلبكم بنجاح بنجاح",
-            icon: "success",
-            showCloseButton: true,
-            showConfirmButton: true,
-            confirmButtonText: '<a href="/">حسناً</a>',
-            confirmButtonColor: '#e3e3e3'
-          });
+        handleClick(inqueryObject);
+       
     }}
 >
     ارسال

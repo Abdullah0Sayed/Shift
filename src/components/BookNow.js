@@ -57,6 +57,7 @@ function BookNow() {
 
     const cart = useSelector(state => state.bookingCart);
 
+    // console.log(cart.length)
     // let cartLength = cart.length;
     const dispatch = useDispatch();
     const totalPrice = cart.reduce((acc, service) => {
@@ -101,18 +102,93 @@ function BookNow() {
         car_size: null,
         services: []
     };
-    const handleClick = async (bookingObject) => {
+    const handleClick = async (bookingObject , cart) => {
+        // التحقق من صحة الحقول
+        if (!bookingObject.client_name) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال الاسم الكامل.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+    
+        if (!bookingObject.client_phone || bookingObject.client_phone.length !== 9) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال رقم الهاتف المكون من 9 أرقام.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+    
+        if (!bookingObject.car_brand) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال نوع السيارة.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+    
+        if (!bookingObject.car_model) {
+            Swal.fire({
+                title: 'خطأ',
+                text: 'يرجى إدخال موديل السيارة.',
+                icon: 'warning',
+                confirmButtonText: 'موافق'
+            });
+            return;
+        }
+    
+        // التحقق من أن حجم السيارة قد تم اختياره
+    if (!bookingObject.car_size) {
+        Swal.fire({
+            title: 'خطأ',
+            text: 'يرجى اختيار حجم السيارة.',
+            icon: 'warning',
+            confirmButtonText: 'موافق'
+        });
+        return;
+    }
+   
+    if(cart.length < 1) {
+        Swal.fire({
+            title: 'خطأ',
+            text: 'يرجى اختيار اختيار خدمة واحدة على الأقل لتاكيد عملية الحجز.',
+            icon: 'warning',
+            confirmButtonText: 'موافق'
+        });
+        return;
+    }
+        // إرسال الطلب بعد التحقق من صحة المدخلات
         try {
-            const { data } = await axios.post('http://127.0.0.1:8000/api/booking-order',bookingObject , {
+            const { data } = await axios.post('http://127.0.0.1:8000/api/booking-order', bookingObject, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
             console.log(data);
+            Swal.fire({
+                title: 'تم تأكيد الحجز',
+                text: 'تم تأكيد الحجز بنجاح. سنقوم بالتواصل معكم قريباً.',
+                icon: 'success',
+                confirmButtonText: 'موافق'
+            });
         } catch (error) {
             console.error(error);
+            Swal.fire({
+                title: 'حدث خطأ',
+                text: 'عذراً، حدث خطأ أثناء تأكيد الحجز. يرجى المحاولة مرة أخرى.',
+                icon: 'error',
+                confirmButtonText: 'موافق'
+            });
         }
     };
+    
     useEffect(() => {
         async function fetchServices() {
             try {
@@ -438,18 +514,7 @@ function BookNow() {
                                     price: element.service_price
                                 });
                             });
-                            handleClick(bookingObject);
-                            // console.log(cart)
-                            // console.log(bookingObject)
-                            Swal.fire({
-                                // title: "Good job!",
-                                text: "تم تأكيد عملية الحجز بنجاح",
-                                icon: "success",
-                                showCloseButton: true,
-                                showConfirmButton: true,
-                                confirmButtonText: '<a href="/">حسناً</a>',
-                                confirmButtonColor: "#e3e3e3",
-                            });
+                            handleClick(bookingObject , cart);
                         }}
                     >
                         <span>تأكيد عملية الحجز</span>

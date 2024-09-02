@@ -108,7 +108,7 @@ function Home() {
             <QuickLinkBox  heading="إحجز الأن" desc="تمتع بتجربة فريدة مع SHIFT" bg="purble" image={bookingIcon} url="/book-now"/>
             <QuickLinkBox  heading="أعمالنا" desc="شاهد جميع أعمال SHIFT" bg="white" image={workIcon} url="/our-works"/>
 
-            <SectionHeading heading="أحدث منتجاتنا" />
+            {/* <SectionHeading heading="أحدث منتجاتنا" />
             <div className="row justify-content-center gap-2 animate__animated animate__fadeInRight">
 
             <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>
@@ -117,8 +117,8 @@ function Home() {
             <ItemBox itemImage={power} itemTitle={'ملمع زجاج'} priceAfterDiscount={50} priceBeforeDiscount={80}/>
               
 
-            </div>
-            <SectionHeading heading="خدمتنا" />
+            </div> */}
+            {/* <SectionHeading heading="خدمتنا" />
             <div className="row gap-3 animate__animated animate__fadeInRight justify-content-center">
               
               <ServiceBox image={retoutch}  serviceTitle="خدمة تلميع" serviceWarranty="ضمان 4 سنوات"/>
@@ -127,7 +127,7 @@ function Home() {
               <ServiceBox image={retoutch}  serviceTitle="خدمة افلام حماية" serviceWarranty="ضمان 4 سنوات"/>
 
 
-            </div>
+            </div> */}
             </div>
            
           </div>

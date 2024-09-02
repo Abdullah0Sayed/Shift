@@ -37,15 +37,73 @@ function Complaints() {
             complaintForm.append('invoice_file' , invoice_file)
             complaintForm.append('warranty_file' , warranty_file)
             complaintForm.append('damages_file' , damages_file)
+
+            if(complaintForm.get('client_full_name') === '') {
+                Swal.fire({
+                    title: 'خطأ',
+                    text: 'يرجى إدخال الاسم الكامل.',
+                    icon: 'warning',
+                    confirmButtonText: 'موافق'
+                });
+                return;
+            }
+            if(complaintForm.get('client_mobile_phone') === '' || complaintForm.get('client_mobile_phone').length !== 9) {
+                Swal.fire({
+                    title: 'خطأ',
+                    text: 'يرجى إدخال رقم الهاتف المكون من 9 أرقام.',
+                    icon: 'warning',
+                    confirmButtonText: 'موافق'
+                });
+                return;
+            }
+            if(complaintForm.get('order_type') === '') {
+                Swal.fire({
+                    title: 'خطأ',
+                    text: 'يرجى تحديد نوع الطلب ( شكوى / مقترح ).',
+                    icon: 'warning',
+                    confirmButtonText: 'موافق'
+                });
+                return;
+            }
+            if(complaintForm.get('order_for_service') === '') {
+                Swal.fire({
+                    title: 'خطأ',
+                    text: 'يرجى تحديد نوع الخدمة التي تود إرسال مقترح / شكوى عنها.',
+                    icon: 'warning',
+                    confirmButtonText: 'موافق'
+                });
+                return;
+            }
+            if(complaintForm.get('message') === '') {
+                Swal.fire({
+                    title: 'خطأ',
+                    text: 'يرجى إدخال رسالتك ، لنستطيع مساعدتك في ما تريد',
+                    icon: 'warning',
+                    confirmButtonText: 'موافق'
+                });
+                return;
+            }
             const { data } = await axios.post('http://127.0.0.1:8000/api/compalints-suggests',complaintForm, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             });
             console.log(data)
+            Swal.fire({
+                title: 'تم ارسال استفساركم بنجاح',
+                text: 'تم ارسال طلبكم بنجاح. وسنقوم بالتواصل معكم قريباً.',
+                icon: 'success',
+                confirmButtonText: '<a href="/">موافق<a/>'
+            });
             
         } catch (error) {
             console.error(error);
+            Swal.fire({
+                title: 'حدث خطأ',
+                text: 'عذراً، حدث خطأ أثناء ارسال طلبكم. يرجى المحاولة مرة أخرى.',
+                icon: 'error',
+                confirmButtonText: 'موافق'
+            });
         }
     };
     return (

@@ -44,13 +44,13 @@ function App() {
             <Route path="/contact-us" element={<Contactus />}></Route>
             <Route path="/complaints" element={<Complaints />}></Route>
             <Route path="/our-loaction" element={<OurLocation />}></Route>
-            <Route path="/our-products" element={<OurProducts />}></Route>
+            {/* <Route path="/our-products" element={<OurProducts />}></Route> */}
             <Route path="/warranty-policy" element={<WarrantyPolicy />}></Route>
             <Route path="/product-details/:id" element={<ProductDetails />}></Route>
             <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
             <Route path="/our-works" element={<Gallery />}></Route>
             <Route path="/book-now" element={<BookNow />}></Route>
-            <Route path="/service-details/:id" element={<ServiceDetails />}></Route>
+            {/* <Route path="/service-details/:id" element={<ServiceDetails />}></Route> */}
           </Routes>
         </div>
       
