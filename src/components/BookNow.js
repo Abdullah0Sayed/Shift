@@ -220,7 +220,7 @@ function BookNow() {
                     <FeatureBox featureIcon={userStepIcon} featureName="الخطوة الأولى" featureDescription="قم بملئ البيانات الشخصية وبيانات السيارة" />
                     <FeatureBox featureIcon={carStepIcon} featureName="الخطوة الثانية" featureDescription="قم بإختيار حجم سيارتك ما بين (صغير - وسط - كبير)" />
                     <FeatureBox featureIcon={serviceStepIcon} featureName="الخطوة الثالثة" featureDescription="قم بإختيار تصنيف الخدمة التي ترديها ثم احجز الخدمة المرادة" />
-                    <FeatureBox featureIcon={searchStepIcon} featureName="الخطوة الرابعة" featureDescription="قم بمراجعة طلبك جيداً ، ثم اضغط على زر تأكيد الحجز" />
+                    <FeatureBox featureIcon={searchStepIcon} featureName="الخطوة الرابعة" featureDescription="قم بمراجعة طلبك جيداً من خلال عربة الشراء وملخص الحجز الخاص بك ، ثم اضغط على زر تأكيد الحجز" />
                     <FeatureBox featureIcon={callStepIcon} featureName="الخطوة الخامسة" featureDescription="بعد تأكيد الحجز ، نستقبل طلبكم وسيقوم أحد ممثلي خدمة عملائنا بالتواصل معكم" />
                     <FeatureBox featureIcon={dateStepIcon} featureName="الخطوة الساسة" featureDescription="بعد استقبال طلبكم ، يتم تعيين ميعاد حجز وإخباركم به من خلال الاتصال على رقم الجوال الخاص بكم" />
                 </div>
