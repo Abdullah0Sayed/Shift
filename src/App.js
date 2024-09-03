@@ -48,7 +48,7 @@ function App() {
             <Route path="/warranty-policy" element={<WarrantyPolicy />}></Route>
             <Route path="/product-details/:id" element={<ProductDetails />}></Route>
             <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-            <Route path="/our-works" element={<Gallery />}></Route>
+            {/* <Route path="/our-works" element={<Gallery />}></Route> */}
             <Route path="/book-now" element={<BookNow />}></Route>
             {/* <Route path="/service-details/:id" element={<ServiceDetails />}></Route> */}
           </Routes>

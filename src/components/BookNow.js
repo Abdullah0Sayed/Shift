@@ -229,7 +229,7 @@ function BookNow() {
                     headingDescription="من فضلك قم بملئ البيانات المطلوبة"
                 ></SectionHeading>
                 <form action="" method="post">
-                    <div className="row book-details" id="userData">
+                    <div className="row book-details">
                         <div className="col-6">
                             <Input
                                 type="text"
